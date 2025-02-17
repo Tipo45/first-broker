@@ -1,4 +1,5 @@
-import img001 from "../assets/Images/PayPal_Logo_Alternative_2.webp";
+import { Link } from "react-router-dom";
+import img001 from "../../assets/Images/PayPal_Logo_Alternative_2.webp";
 const Frontpage = () => {
   return (
     <>
@@ -16,9 +17,9 @@ const Frontpage = () => {
                 Invest with competitive trading conditions and choose from
                 hudered of companies across global markets.
               </p>
-              <button className="bg-amber-400 text-white-rice text-lg font-bold outline-none p-4 rounded-2xl hover:bg-transparent hover:border-amber-400 border-2 hover:text-black-spider transition-transform duration-300 ease-in-out hover:-translate-y-2">
+              <Link to="/registration"><button className="bg-amber-400 text-white-rice text-lg font-bold outline-none p-4 rounded-2xl hover:bg-transparent hover:border-amber-400 border-2 hover:text-black-spider transition-transform duration-300 ease-in-out hover:-translate-y-2">
                 Open An Account
-              </button>
+              </button></Link>
             </div>
           </div>
           <div className="mt-15 text-center">

@@ -1,11 +1,12 @@
-import paypalimg from "../assets/Images/PayPal_Logo_Alternative_2.webp";
-import stripeimg from "../assets/Images/Stripe_id7qRMcZ8P_0.svg";
-import masterimg from "../assets/Images/Mastercard_Symbol_2.webp";
-import visaimg from "../assets/Images/Visa Inc._idDUM8TcN7_1.png";
+import paypalimg from "../../assets/Images/PayPal_Logo_Alternative_2.webp";
+import stripeimg from "../../assets/Images/Stripe_id7qRMcZ8P_0.svg";
+import masterimg from "../../assets/Images/Mastercard_Symbol_2.webp";
+import visaimg from "../../assets/Images/Visa Inc._idDUM8TcN7_1.png";
 import { FaArrowRightLong, FaArrowTurnDown } from "react-icons/fa6";
 import { FaTelegram, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -24,13 +25,15 @@ const Footer = () => {
           with us.
         </p>
         <div className="w-full flex justify-center">
-          <button
-            className="flex items-center gap-2 text-md bg-amber-950 rounded-2xl px-8 py-4 text-white 
+          <Link to="/registration">
+            <button
+              className="flex items-center gap-2 text-md bg-amber-950 rounded-2xl px-8 py-4 text-white 
   hover:bg-amber-700 hover:text-lg xl:text-center transition-all duration-300 ease-in-out group"
-          >
-            Create an account
-            <FaArrowRightLong className="text-xl transition-transform duration-300 ease-in-out group-hover:translate-x-2" />
-          </button>
+            >
+              Create an account
+              <FaArrowRightLong className="text-xl transition-transform duration-300 ease-in-out group-hover:translate-x-2" />
+            </button>
+          </Link>
         </div>
       </section>
 
@@ -57,12 +60,8 @@ const Footer = () => {
             }`}
           >
             <div className="pl-2">
-              <li className="p-2">
-                <a href="#">Asset Management</a>
-              </li>
-              <li className="p-2">
-                <a href="#">Brokerage</a>
-              </li>
+              <li className="p-2">Asset Management</li>
+              <li className="p-2">Brokerage</li>
             </div>
           </div>
         </div>
@@ -88,12 +87,14 @@ const Footer = () => {
             }`}
           >
             <div className="pl-2">
-              <li className="p-2">
-                <a href="#">Tipo Developers</a>
-              </li>
-              <li className="p-2">
-                <a href="#">Meet the Team</a>
-              </li>
+              <ul>
+                <li className="p-2">
+                  <a href="#">Tipo Developers</a>
+                </li>
+                <li className="p-2">
+                  <a href="#">Meet the Team</a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

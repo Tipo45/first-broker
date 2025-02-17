@@ -54,7 +54,7 @@ const Header = () => {
         {/* Toggle Button */}
         <button
           onClick={toggleMenu}
-          className="text-2xl font-bold focus:outline-none xl:hidden transition-transform duration-300 ease-in-out"
+          className="text-2xl cursor-pointer font-bold focus:outline-none xl:hidden transition-transform duration-300 ease-in-out"
         >
           {isOpen ? <FaTimes /> : <RiMenu2Line />}
         </button>

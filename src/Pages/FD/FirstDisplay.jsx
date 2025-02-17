@@ -1,7 +1,10 @@
-import Footer from "../Footer/Footer"
-import Frontpage from "../FrontPage/Frontpage"
-import Header from "../Header/Header"
+import Footer from "../../Components/Footer/Footer"
+import Frontpage from "../../Components/FrontPage/Frontpage"
+import Header from "../../Components/Header/Header"
 import Home from "../Home Page/Home"
+
+
+
 
 const FirstDisplay = () => {
   return (

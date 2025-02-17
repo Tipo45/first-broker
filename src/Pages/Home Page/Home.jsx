@@ -3,11 +3,11 @@ import { FaMinus, FaMoneyBill1Wave, FaPlus, FaUserPlus } from "react-icons/fa6";
 import { IoIosCheckbox, IoIosInformationCircleOutline } from "react-icons/io";
 import { MdAppRegistration, MdOutlineAccessTime } from "react-icons/md";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
-import paypalimag from "../assets/Images/PayPal_Logo_Alternative_2.webp";
+import paypalimag from "../../assets/Images/PayPal_Logo_Alternative_2.webp";
 import { BiBookOpen } from "react-icons/bi";
-import img001 from "../assets/Images/PayPal_Logo_Alternative_2.webp";
-import img002 from "../assets/Images/Stripe_id7qRMcZ8P_0.svg";
-import img004 from "../assets/Images/Visa Inc._idDUM8TcN7_1.png";
+import img001 from "../../assets/Images/PayPal_Logo_Alternative_2.webp";
+import img002 from "../../assets/Images/Stripe_id7qRMcZ8P_0.svg";
+import img004 from "../../assets/Images/Visa Inc._idDUM8TcN7_1.png";
 import { AiOutlineLineChart } from "react-icons/ai";
 import { FaExchangeAlt } from "react-icons/fa";
 
@@ -301,7 +301,7 @@ const Home = () => {
                 className="relative flex flex-col justify-center items-center w-72 h-72 bg-amber-400 hover:bg-amber-950 outline-2 outline-gray-200 rounded-full overflow-hidden p-6 transition-colors duration-300 group"
               >
                 <p className="text-4xl group-hover:hidden">{trait.logo}</p>
-                <h3 className="text-2xl text-center font-semibold mb-2 group-hover:text-gray-100 group-hover:font-extrabold">
+                <h3 className="text-2xl text-center font-semibold mb-2 group-hover:text-gray-100 group-hover:font-extrabold ">
                   {trait.description}
                 </h3>
                 <p className="mb-10 text-center text-sm text-gray-500 group-hover:text-white-rice">{trait.news}</p>
