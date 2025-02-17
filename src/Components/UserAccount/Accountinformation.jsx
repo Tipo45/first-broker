@@ -80,7 +80,7 @@ const Accountinformation = () => {
               <div className="grid grid-cols-1 xl:max-4xl:grid-cols-2 mt-2">
                 <span className="text-lg font-medium">Address:</span>
                 <span className="bg-gray-700 rounded-2xl px-2 py-4 text-lg font-semibold mt-2 text-white-rice">
-                  White House, Washington D.C., Brazil
+                  Nigeria
                 </span>
               </div>
 
