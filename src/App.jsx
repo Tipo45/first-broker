@@ -16,6 +16,10 @@ function App() {
         <Route path="/registration" element={<Registration />} />
         <Route path="/user_account/:activepage" element={<Useraccount />} />
         <Route path="/user_account/account-information" element={<Accountinformation />} />
+        <Route path="/user_acccount/account-information/name-settings" element />
+        <Route path="/user_acccount/account-information/change-username" element />
+        <Route path="/user_acccount/account-information/change-password" element />
+        <Route path="/user_acccount/account-information/ID-upload" element />
 
 
         <Route path="*" element />

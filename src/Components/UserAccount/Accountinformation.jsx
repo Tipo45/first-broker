@@ -1,6 +1,12 @@
-import { FaArrowAltCircleLeft, FaRegEdit } from "react-icons/fa";
+import {
+  FaArrowAltCircleLeft,
+  FaRegAddressCard,
+  FaRegEdit,
+} from "react-icons/fa";
 import Usersidebar from "./Usersidebar";
 import { Link } from "react-router-dom";
+import { RiDeleteBin5Line } from "react-icons/ri";
+import { IoIosArrowDropright, IoMdAddCircleOutline } from "react-icons/io";
 
 const Accountinformation = () => {
   return (
@@ -9,9 +15,9 @@ const Accountinformation = () => {
       <Usersidebar />
 
       {/* Main Content */}
-      <div className="flex-grow pr-1 pl-4 ml-13 tablet:max-4xl:ml-64 transition-all duration-300 mt-1 mb-1">
+      <div className="flex-grow pr-1 pl-4 ml-13 tablet:ml-43 transition-all duration-300 mt-1 mb-1">
         {/* Header Section */}
-        <div className="bg-gray-400 p-2 rounded-lg">
+        <div className="bg-gray-400 p-4 rounded-lg">
           <Link to="/user_account/dashboard">
             <div className="inline-flex items-center p-2 rounded-full hover:bg-gray-500 transition duration-300 group">
               <FaArrowAltCircleLeft className="text-2xl text-white group-hover:text-black-spider" />
@@ -20,77 +26,93 @@ const Accountinformation = () => {
 
           {/* Title */}
           <div className="text-center mt-2">
-            <h1 className="text-xl font-medium text-white">
+            <h1 className="text-2xl font-bold text-white">
               Account Information
             </h1>
           </div>
-          <section>
-            <div className="mt-2 mb-0">
-              <h2
-                className="text-2xl font-bold
-              "
-              >
-                Personal Info:
-              </h2>
-            </div>
-            <div className="mt-2">
-              <div className="grid grid-cols-1 xl:max-4xl:grid-cols-2">
-                <span className="text-lg font-medium">First Name:</span>
-                <div className="bg-gray-700 rounded-2xl px-2 py-4 ">
-                  <span className="relative text-lg font-semibold mt-2 text-white-rice">
-                    Steven
-                  </span>
-                  <span className="absolute right-8 top-47">
-                    <FaRegEdit className="text-lg text-white" />
-                  </span>
-                </div>
+
+          {/* Personal Info Section */}
+          <section className="mt-4">
+            <h2 className="text-2xl font-bold mb-4">Personal Info:</h2>
+            <div className="grid grid-cols-1 gap-4 tablet:grid-cols-2">
+              {/* First Name */}
+              <div className="bg-gray-300 p-4 rounded-2xl relative">
+                <span className="text-lg font-semibold">First Name:</span>
+                <span className="block mt-2 text-lg font-medium text-gray-600">
+                  Steven
+                </span>
+                <Link to="user_account/account-information/settings">
+                  <FaRegEdit className="absolute top-4 right-4 text-lg text-white cursor-pointer" />
+                </Link>
               </div>
 
-              <div className="grid grid-cols-1 xl:max-4xl:grid-cols-2 mt-2">
-                <span className="text-lg font-medium">Last Name:</span>
-                <div className="bg-gray-700 rounded-2xl px-2 py-4 ">
-                  <span className="relative text-lg font-semibold mt-2 text-white-rice">
-                    Azebi-Alex
-                  </span>
-                  <span className="absolute right-9 top-70">
-                    <FaRegEdit className="text-lg text-white" />
-                  </span>
-                </div>
+              {/* Last Name */}
+              <div className="bg-gray-300 p-4 rounded-2xl relative">
+                <span className="text-lg font-semibold">Last Name:</span>
+                <span className="block mt-2 text-lg font-medium text-gray-600">
+                  Azebi-Alex
+                </span>
+                <FaRegEdit className="absolute top-4 right-4 text-lg text-white cursor-pointer" />
               </div>
 
-              <div className="grid grid-cols-1 xl:max-4xl:grid-cols-2 mt-2">
-                <span className="text-lg font-medium">e-mail:</span>
-                <span className="bg-gray-700 rounded-2xl px-2 py-4 text-lg font-semibold mt-2 text-white-rice">
+              {/* Username */}
+              <div className="bg-gray-300 p-4 rounded-2xl relative">
+                <span className="text-lg font-semibold">Username:</span>
+                <span className="block mt-2 text-lg font-medium text-gray-600">
+                  tipo45
+                </span>
+                <FaRegEdit className="absolute top-4 right-4 text-lg text-white cursor-pointer" />
+              </div>
+
+              {/* Email */}
+              <div className="bg-gray-300 p-4 rounded-2xl">
+                <span className="text-lg font-semibold">Email:</span>
+                <span className="block mt-2 text-lg font-medium text-gray-600">
                   tipo4542@gmail.com
                 </span>
               </div>
 
-              <div className="grid grid-cols-1 xl:max-4xl:grid-cols-2 mt-2">
-                <span className="text-lg font-medium">Username:</span>
-                <div className="bg-gray-700 rounded-2xl px-2 py-4 ">
-                  <span className="relative text-lg font-semibold mt-2 text-white-rice">
-                    tipo45
-                  </span>
-                  <span className="absolute right-8 bottom-41">
-                    <FaRegEdit className="text-lg text-white" />
-                  </span>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 xl:max-4xl:grid-cols-2 mt-2">
-                <span className="text-lg font-medium">Address:</span>
-                <span className="bg-gray-700 rounded-2xl px-2 py-4 text-lg font-semibold mt-2 text-white-rice">
+              {/* Country */}
+              <div className="bg-gray-300 p-4 rounded-2xl">
+                <span className="text-lg font-semibold">Country:</span>
+                <span className="block mt-2 text-lg font-medium text-gray-600">
                   Nigeria
                 </span>
               </div>
-
-              <div className="flex justify-center mt-6">
-                <button className="bg-amber-400 p-4 rounded-xl text-white-rice font-semibold text-xl hover:bg-amber-300 ">
-                  Edit
-                </button>
-              </div>
             </div>
           </section>
+
+          {/* Verification Section */}
+          <section className="mt-8">
+            <h2 className="text-2xl font-bold mb-4">Verification</h2>
+            <div className="bg-gray-300 p-4 rounded-2xl relative group">
+              <span className="text-lg font-semibold">Not Verified</span>
+              <span className="flex items-center mt-2 text-lg font-medium text-gray-600">
+                <FaRegAddressCard className="mr-2 text-xl" />
+                Personal ID
+              </span>
+              <IoMdAddCircleOutline className="absolute top-4 right-4 text-3xl text-white cursor-pointer" />
+            </div>
+          </section>
+
+          {/* Security Section */}
+          <section className="mt-8">
+            <h2 className="text-2xl font-bold mb-4">Security:</h2>
+            <div className="bg-gray-700 p-4 rounded-2xl group cursor-pointer hover:bg-gray-600 transition duration-300">
+              <span className="text-lg font-semibold text-white-rice">
+                Change Password
+              </span>
+              <IoIosArrowDropright className="absolute top-245 tablet:top-189 right-10 text-3xl text-white transition-all duration-300 group-hover:translate-x-2" />
+            </div>
+          </section>
+
+          {/* Delete Account Button */}
+          <div className="flex justify-center mt-8">
+            <button className="flex items-center bg-red-600 p-4 rounded-xl text-white-rice font-semibold text-xl hover:bg-red-500 transition duration-300">
+              <RiDeleteBin5Line className="text-2xl mr-2" />
+              Delete Account
+            </button>
+          </div>
         </div>
       </div>
     </section>
