@@ -1,10 +1,7 @@
-import Footer from "../../Components/Footer/Footer"
-import Frontpage from "../../Components/FrontPage/Frontpage"
-import Header from "../../Components/Header/Header"
-import Home from "../Home Page/Home"
-
-
-
+import Footer from "../../Components/Footer/Footer";
+import Frontpage from "../../Components/FrontPage/Frontpage";
+import Header from "../../Components/Header/Header";
+import Home from "../../Components/Home Page/Home";
 
 const FirstDisplay = () => {
   return (
@@ -16,7 +13,7 @@ const FirstDisplay = () => {
       </main>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default FirstDisplay
+export default FirstDisplay;

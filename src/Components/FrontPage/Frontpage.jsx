@@ -6,20 +6,23 @@ const Frontpage = () => {
       <section>
         <div className="mt-20 p-6">
           <div className="grid grid-cols-1 gap-10 xl:grid-cols-2">
-            <div className="bg-amber-300 p-10 rounded-4xl">
+            <div className="bg-dark-blue p-10 rounded-4xl">
               <img src={img001} alt="" className="w-full h-auto" />
             </div>
             <div className="text-center">
               <h3 className="mb-5 text-3xl font-bold">
                 Trade on shares and buy crypto with Tipo&apos;s Brokers
               </h3>
-              <p className="mb-5 text-amber-500 font-medium">
+              <p className="mb-5 text-charcoal-gray font-medium">
                 Invest with competitive trading conditions and choose from
-                hudered of companies across global markets.
+                hundred of companies across global markets.
               </p>
-              <Link to="/registration"><button className="bg-amber-400 text-white-rice text-lg font-bold outline-none p-4 rounded-2xl hover:bg-transparent hover:border-amber-400 border-2 hover:text-black-spider transition-transform duration-300 ease-in-out hover:-translate-y-2">
-                Open An Account
-              </button></Link>
+              <Link to="/registration" className="">
+              <button className="relative bg-teal text-white-rice text-lg font-bold outline-none p-4 rounded-2xl border-2 border-transparent overflow-hidden group hover:text-black-spider transition-colors duration-300 ease-in-out">
+  <span className="relative z-10">Open an account</span>
+  <div className="absolute inset-y-0 left-[-100%] w-full bg-white border-1 border-darker-teal transition-all duration-300 ease-in-out group-hover:left-0 z-0"></div>
+</button>
+              </Link>
             </div>
           </div>
           <div className="mt-15 text-center">

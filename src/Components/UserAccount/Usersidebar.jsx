@@ -31,7 +31,7 @@ const Usersidebar = ({ activepage }) => {
     <section>
       <div className="flex">
       <div
-      className={`bg-amber-900 text-white h-full fixed left-0 top-0 transition-all duration-300 ease-in-out flex flex-col ${
+      className={`bg-dark-blue text-white h-full fixed left-0 top-0 transition-all duration-300 ease-in-out flex flex-col ${
         isExpanded ? "w-35 tablet:w-45" : "w-16 tablet:max-4xl:w-15"
       }`}
     >
@@ -56,13 +56,13 @@ const Usersidebar = ({ activepage }) => {
               <Link
                 to={to}
                 className={`flex items-center p-3 transition-colors duration-200 relative group ${
-                  activepage === key ? "bg-amber-700" : "hover:bg-amber-700"
+                  activepage === key ? "bg-darker-teal" : "hover:bg-teal"
                 }`}
               >
                 {icon}
                 {isExpanded && <span className="ml-2 text-sm">{label}</span>}
                 {!isExpanded && (
-                  <span className="absolute left-16 ml-2 px-2 py-1 bg-amber-700 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+                  <span className="absolute left-16 z-100 ml-2 px-2 py-1 bg-charcoal-gray text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
                     {label}
                   </span>
                 )}
@@ -73,9 +73,9 @@ const Usersidebar = ({ activepage }) => {
       </nav>
 
       {/* User Info & Logout */}
-      <div className="mt-auto p-4 border-t border-amber-500">
+      <div className="mt-auto p-4 border-t border-light-gray">
         <div className="flex items-center">
-          <Link to="/user_account/account-information">{!isExpanded && <FaUser className="h-8 w-8 hover:text-gray-400" />}
+          <Link to="/user_account/account-information">{!isExpanded && <FaUser className="h-8 w-8 hover:text-teal" />}
           {isExpanded && (
             <div className="ml-0">
               <p className="text-sm font-medium mb-1">John Doe</p>
@@ -88,7 +88,7 @@ const Usersidebar = ({ activepage }) => {
           <FaSignOutAlt className="h-6 w-6" />
           {isExpanded && <span className="ml-2">Logout</span>}
           {!isExpanded && (
-            <span className="absolute left-16 ml-2 px-2 py-1 bg-amber-700 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+            <span className="absolute left-16 -ml-2 px-2 py-1 bg-charcoal-gray text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
               Logout
             </span>
           )}

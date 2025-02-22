@@ -41,7 +41,7 @@ const Accountinformation = () => {
                 <span className="block mt-2 text-lg font-medium text-gray-600">
                   Steven
                 </span>
-                <Link to="user_account/account-information/settings">
+                <Link to="/user_acccount/account-information/user-account/change-name">
                   <FaRegEdit className="absolute top-4 right-4 text-lg text-white cursor-pointer" />
                 </Link>
               </div>
@@ -52,7 +52,9 @@ const Accountinformation = () => {
                 <span className="block mt-2 text-lg font-medium text-gray-600">
                   Azebi-Alex
                 </span>
-                <FaRegEdit className="absolute top-4 right-4 text-lg text-white cursor-pointer" />
+                <Link to="/user_acccount/account-information/user-account/change-name">
+                  <FaRegEdit className="absolute top-4 right-4 text-lg text-white cursor-pointer" />
+                </Link>
               </div>
 
               {/* Username */}
@@ -61,7 +63,9 @@ const Accountinformation = () => {
                 <span className="block mt-2 text-lg font-medium text-gray-600">
                   tipo45
                 </span>
-                <FaRegEdit className="absolute top-4 right-4 text-lg text-white cursor-pointer" />
+                <Link to="/user_acccount/account-information/user-account/change-username">
+                  <FaRegEdit className="absolute top-4 right-4 text-lg text-white cursor-pointer" />
+                </Link>
               </div>
 
               {/* Email */}
@@ -91,19 +95,23 @@ const Accountinformation = () => {
                 <FaRegAddressCard className="mr-2 text-xl" />
                 Personal ID
               </span>
-              <IoMdAddCircleOutline className="absolute top-4 right-4 text-3xl text-white cursor-pointer" />
+              <Link to="/user_acccount/account-information/user-account/ID-upload">
+                <IoMdAddCircleOutline className="absolute top-4 right-4 text-3xl text-white cursor-pointer" />
+              </Link>
             </div>
           </section>
 
           {/* Security Section */}
           <section className="mt-8">
             <h2 className="text-2xl font-bold mb-4">Security:</h2>
-            <div className="bg-gray-700 p-4 rounded-2xl group cursor-pointer hover:bg-gray-600 transition duration-300">
-              <span className="text-lg font-semibold text-white-rice">
-                Change Password
-              </span>
-              <IoIosArrowDropright className="absolute top-245 tablet:top-189 right-10 text-3xl text-white transition-all duration-300 group-hover:translate-x-2" />
-            </div>
+            <Link to="/user_acccount/account-information/user-account/change-password">
+              <div className="bg-gray-700 p-4 rounded-2xl group cursor-pointer hover:bg-gray-600 transition duration-300">
+                <span className="text-lg font-semibold text-white-rice">
+                  Change Password
+                </span>
+                <IoIosArrowDropright className="absolute top-245 tablet:top-189 right-10 text-3xl text-white transition-all duration-300 group-hover:translate-x-2" />
+              </div>
+            </Link>
           </section>
 
           {/* Delete Account Button */}

@@ -5,6 +5,12 @@ import Clientlogin from "./Pages/Login/Clientlogin";
 import FirstDisplay from "./Pages/FD/FirstDisplay";
 import Registration from "./Pages/Login/Registration";
 import Accountinformation from "./Components/UserAccount/Accountinformation";
+import Namesettings from "./Components/UserAccount/Namesettings";
+import Usernamesettings from "./Components/UserAccount/Usernamesettings";
+import Changeofpassword from "./Components/UserAccount/Changeofpassword";
+import Verificationupload from "./Components/UserAccount/Verificationupload";
+import Assetmangement from "./Pages/Frontpagelinks/Assetmangement";
+import Brokerage from "./Pages/Frontpagelinks/Brokerage";
 
 
 function App() {
@@ -16,10 +22,12 @@ function App() {
         <Route path="/registration" element={<Registration />} />
         <Route path="/user_account/:activepage" element={<Useraccount />} />
         <Route path="/user_account/account-information" element={<Accountinformation />} />
-        <Route path="/user_acccount/account-information/name-settings" element />
-        <Route path="/user_acccount/account-information/change-username" element />
-        <Route path="/user_acccount/account-information/change-password" element />
-        <Route path="/user_acccount/account-information/ID-upload" element />
+        <Route path="/user_acccount/account-information/user-account/change-name" element={<Namesettings />} />
+        <Route path="/user_acccount/account-information/user-account/change-username" element={<Usernamesettings />} />
+        <Route path="/user_acccount/account-information/user-account/change-password" element={<Changeofpassword />} />
+        <Route path="/user_acccount/account-information/user-account/ID-upload" element={<Verificationupload />} />
+        <Route path="/asset-management" element={<Assetmangement />} />
+        <Route path="/brokerage" element={<Brokerage />} />
 
 
         <Route path="*" element />

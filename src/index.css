@@ -5,6 +5,13 @@
     --font-secondary: "Roboto", "serif";
     --color-black-spider: #040200;
     --color-white-rice: #faf5ef;
+    --color-light-gray: #F5F5F5;
+    --color-charcoal-gray: #2C3E50;
+    --color-gold: #FFD700;
+    --color-darker-gold: #E6B800;
+    --color-dark-blue: #1E2A3A;
+    --color-teal: #00BFA5;
+    --color-darker-teal: #009688;
     --breakpoint-*: initial;
     --breakpoint-lg: 640px;
     --breakpoint-tablet: 768px;
