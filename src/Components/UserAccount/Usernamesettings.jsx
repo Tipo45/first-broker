@@ -34,7 +34,7 @@ const Usernamesettings = () => {
             <input
               type="text"
               placeholder="New username"
-              className="outline-2 focus:outline-teal w-full rounded-lg p-2 bg-gray-300"
+              className="outline-2 outline-white hover:outline-teal focus:outline-teal w-full rounded-lg p-2 bg-gray-300"
             />
           </div>
         </div>

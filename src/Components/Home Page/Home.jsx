@@ -235,7 +235,7 @@ const Home = () => {
             <ul className="grid grid-cols-1 gap-10 tablet:grid-cols-2 xl:grid-cols-4">
               {elements.map((element, index) => (
                 <Link
-                  to=""
+                  to="/"
                   key={index}
                   className="p-3 bg-charcoal-gray rounded-lg transition-colors duration-300 group"
                 >

@@ -29,7 +29,7 @@ const LoginComp = () => {
                   type="email"
                   placeholder="m@example.com"
                   required
-                  className="outline-1 outline-dark-blue focus:outline-teal rounded-2xl p-2"
+                  className="outline-1 outline-dark-blue hover:outline-teal focus:outline-teal rounded-2xl p-2"
                 />
               </div>
               <div className="grid gap-2">
@@ -47,7 +47,7 @@ const LoginComp = () => {
                   type="password"
                   placeholder="********"
                   required
-                  className="outline-1 outline-dark-blue focus:outline-teal rounded-2xl p-2"
+                  className="outline-1 outline-dark-blue hover:outline-teal focus:outline-teal rounded-2xl p-2"
                 />
               </div>
               <Link to="/user_account/dashboard">

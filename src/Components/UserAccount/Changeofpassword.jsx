@@ -22,7 +22,7 @@ const Changeofpassword = () => {
             <input
               type="password"
               placeholder="Old password"
-              className="outline-2 outline-charcoal-gray focus:outline-teal w-full rounded-lg p-2 bg-gray-300"
+              className="outline-2 outline-white hover:outline-teal focus:outline-teal w-full rounded-lg p-2 bg-gray-300"
             />
           </div>
 
@@ -30,7 +30,7 @@ const Changeofpassword = () => {
             <input
               type="password"
               placeholder="New password"
-              className="outline-2 outline-charcoal-gray focus:outline-teal w-full rounded-lg p-2 bg-gray-300"
+              className="outline-2 outline-white hover:outline-teal focus:outline-teal w-full rounded-lg p-2 bg-gray-300"
             />
           </div>
 
@@ -38,7 +38,7 @@ const Changeofpassword = () => {
             <input
               type="password"
               placeholder="Confirm password"
-              className="outline-2 outline-charcoal-gray focus:outline-teal w-full rounded-lg p-2 bg-gray-300"
+              className="outline-2 outline-white hover:outline-teal focus:outline-teal w-full rounded-lg p-2 bg-gray-300"
             />
           </div>
         </div>

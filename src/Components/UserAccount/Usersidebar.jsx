@@ -88,7 +88,7 @@ const Usersidebar = ({ activepage }) => {
           <FaSignOutAlt className="h-6 w-6" />
           {isExpanded && <span className="ml-2">Logout</span>}
           {!isExpanded && (
-            <span className="absolute left-16 -ml-2 px-2 py-1 bg-charcoal-gray text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+            <span className="absolute left-16 -ml-2 px-2 py-1 bg-red-500 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
               Logout
             </span>
           )}

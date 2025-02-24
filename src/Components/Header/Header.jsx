@@ -12,9 +12,9 @@ const Header = () => {
     setIsOpen(!isOpen);
   };
 
-  // const closeMenu = () => {
-  //   setIsOpen(false);
-  // };
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
 
   const [openDropdown, setOpenDropdown] = useState(null);
 
@@ -91,10 +91,10 @@ const Header = () => {
               <div className="pl-2">
                 <ul className="p-0">
                   <li className="p-2">
-                    <Link to="/asset-management" className="text-gray-700 hover:text-black-spider">Asset Management</Link>
+                    <Link to="/asset-management" onClick={closeMenu} className="text-gray-700 hover:text-black-spider">Asset Management</Link>
                   </li>
                   <li className="p-2">
-                    <Link to="/asset-details" className="text-gray-700 hover:text-black-spider">Details</Link>
+                    <Link to="/asset-management" onClick={closeMenu} className="text-gray-700 hover:text-black-spider">Details</Link>
                   </li>
                 </ul>
               </div>
@@ -122,10 +122,10 @@ const Header = () => {
               <div className="pl-2">
                 <ul className="p-0">
                   <li className="p-2">
-                    <Link to="/" className="text-gray-700 hover:text-black-spider">Commission Account</Link>
+                    <Link to="/commission-account" onClick={closeMenu} className="text-gray-700 hover:text-black-spider">Commission Account</Link>
                   </li>
                   <li className="p-2">
-                    <Link to="/" className="text-gray-700 hover:text-black-spider">Standard Account</Link>
+                    <Link to="/commission-account" onClick={closeMenu} className="text-gray-700 hover:text-black-spider">Standard Account</Link>
                   </li>
                 </ul>
               </div>
@@ -153,10 +153,10 @@ const Header = () => {
               <div className="pl-2">
                 <ul className="p-0">
                   <li className="p-2">
-                    <Link to="/platform" className="text-gray-700 hover:text-black-spider">Platform</Link>
+                    <Link to="/brokerage" onClick={closeMenu} className="text-gray-700 hover:text-black-spider">Platform</Link>
                   </li>
                   <li className="p-2">
-                    <Link to="/brokerage" className="text-gray-700 hover:text-black-spider">Brokerage</Link>
+                    <Link to="/brokerage" onClick={closeMenu} className="text-gray-700 hover:text-black-spider">Brokerage</Link>
                   </li>
                 </ul>
               </div>

@@ -99,12 +99,12 @@ const Footer = () => {
             <div className="pl-2">
               <ul>
                 <li className="p-2">
-                  <Link to="/tipo_developers" className="text-teal underline">
+                  <Link to="/about/tipodev" className="text-teal underline">
                     Tipo Developers
                   </Link>
                 </li>
                 <li className="p-2">
-                  <Link to="/meet-the-team" className="text-teal underline">
+                  <Link to="/about/meettheteam" className="text-teal underline">
                     Meet the Team
                   </Link>
                 </li>
@@ -117,9 +117,9 @@ const Footer = () => {
 
         {/* Contact Link */}
         <div>
-          <Link to="/contact" className="text-lg text-white-rice">
+          <a href="mailto:tipo4542@gmail.com" className="text-lg text-white-rice">
             Contact
-          </Link>
+          </a>
         </div>
       </section>
 

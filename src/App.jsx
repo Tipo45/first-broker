@@ -9,8 +9,9 @@ import Namesettings from "./Components/UserAccount/Namesettings";
 import Usernamesettings from "./Components/UserAccount/Usernamesettings";
 import Changeofpassword from "./Components/UserAccount/Changeofpassword";
 import Verificationupload from "./Components/UserAccount/Verificationupload";
-import Assetmangement from "./Pages/Frontpagelinks/Assetmangement";
-import Brokerage from "./Pages/Frontpagelinks/Brokerage";
+import Homelinks from "./Pages/Frontpagelinks/Homelinks";
+import Aboutdevs from "./Pages/Frontpagelinks/Aboutdevs";
+
 
 
 function App() {
@@ -26,8 +27,10 @@ function App() {
         <Route path="/user_acccount/account-information/user-account/change-username" element={<Usernamesettings />} />
         <Route path="/user_acccount/account-information/user-account/change-password" element={<Changeofpassword />} />
         <Route path="/user_acccount/account-information/user-account/ID-upload" element={<Verificationupload />} />
-        <Route path="/asset-management" element={<Assetmangement />} />
-        <Route path="/brokerage" element={<Brokerage />} />
+        <Route path="/:accessedpage" element={<Homelinks />} />
+        <Route path="/about/:section?" element={<Aboutdevs />} />
+        
+        
 
 
         <Route path="*" element />

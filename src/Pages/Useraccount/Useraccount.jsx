@@ -14,7 +14,7 @@ const Useraccount = () => {
       <Usersidebar activepage={activepage} />
 
       {/* Main Content */}
-      <div className="flex-grow pr-1 pl-4 ml-13 mt-1 mb-1 tablet:ml-43 transition-all duration-300">
+      <div className="flex-grow pr-1 pl-4 ml-13 mt-1 mb-1 tablet:ml-43 transition-all duration-300 ease-in-out">
         {activepage === "dashboard" && <Userdashbboard />}
         {activepage === "my-trades" && <MyTrades />}
         {activepage === "crypto-accounts" && <Crypto />}

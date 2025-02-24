@@ -23,7 +23,7 @@ const Namesettings = () => {
             <input
               type="text"
               placeholder="Enter first name"
-              className="outline-2 outline-charcoal-gray focus:outline-teal w-full rounded-lg p-2 bg-gray-300"
+              className="outline-2 outline-white hover:outline-teal focus:outline-teal w-full rounded-lg p-2 bg-gray-300"
             />
           </div>
 
@@ -31,7 +31,7 @@ const Namesettings = () => {
             <input
               type="text"
               placeholder="Enter last name"
-              className="outline-2 outline-charcoal-gray focus:outline-teal w-full rounded-lg p-2 bg-gray-300"
+              className="outline-2 outline-white hover:outline-teal focus:outline-teal w-full rounded-lg p-2 bg-gray-300"
             />
           </div>
         </div>

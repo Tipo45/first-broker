@@ -34,7 +34,7 @@ const Accountreview = () => {
           <div className="grid grid-cols-1 gap-2 -mt-5">
             <div className="flex justify-between items-center text-white bg-gray-600 p-2 rounded-lg font-medium">
               <span className="flex items-center text-xs">
-                <MdPending className="mr-1 text-xs xl:max-4xl:text-md" />{" "}
+                <MdPending className="mr-1 text-lg xl:max-4xl:text-lg" />{" "}
                 Pending
               </span>
               <span className="flex items-center text-xs">
@@ -45,7 +45,7 @@ const Accountreview = () => {
 
             <div className="flex justify-between items-center text-white bg-green-700 p-2 rounded-lg font-medium">
               <span className="flex items-center text-xs">
-                <MdOutlineGppGood className="mr-1 text-xs xl:max-4xl:text-md" />{" "}
+                <MdOutlineGppGood className="mr-1 text-lg xl:max-4xl:text-lg" />{" "}
                 Success
               </span>
               <span className="flex items-center text-xs">
@@ -56,11 +56,11 @@ const Accountreview = () => {
 
             <div className="flex justify-between items-center text-white bg-red-600 p-1 rounded-lg font-medium">
               <span className="flex items-center text-xs">
-                <MdOutlineSmsFailed className="mr-1 text-xs xl:max-4xl:text-md" />{" "}
+                <MdOutlineSmsFailed className="mr-1 text-lg xl:max-4xl:text-lg" />{" "}
                 Failed
               </span>
-              <span className="flex items-center text-sm">
-                <FaDollarSign className="mr-0 ml-1 mt-0.5 text-xs xl:max-4xl:text-md" />{" "}
+              <span className="flex items-center text-xs">
+                <FaDollarSign className="mr-0 ml-1 mt-0 text-xs xl:max-4xl:text-md" />{" "}
                 <span>20.00</span>
               </span>
             </div>
