@@ -56,7 +56,7 @@ const Accountreview = () => {
 
             <div className="flex justify-between items-center text-white bg-red-600 p-1 rounded-lg font-medium">
               <span className="flex items-center text-xs">
-                <MdOutlineSmsFailed className="mr-1 text-lg xl:max-4xl:text-lg" />{" "}
+                <MdOutlineSmsFailed className="mr-1 ml-1 text-lg xl:max-4xl:text-lg" />{" "}
                 Failed
               </span>
               <span className="flex items-center text-xs">
