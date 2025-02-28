@@ -11,6 +11,7 @@ import Changeofpassword from "./Components/UserAccount/Changeofpassword";
 import Verificationupload from "./Components/UserAccount/Verificationupload";
 import Homelinks from "./Pages/Frontpagelinks/Homelinks";
 import Aboutdevs from "./Pages/Frontpagelinks/Aboutdevs";
+import Investpage from "./Pages/Frontpagelinks/Investpage";
 
 
 
@@ -28,6 +29,7 @@ function App() {
         <Route path="/user_acccount/account-information/user-account/change-password" element={<Changeofpassword />} />
         <Route path="/user_acccount/account-information/user-account/ID-upload" element={<Verificationupload />} />
         <Route path="/:accessedpage" element={<Homelinks />} />
+        <Route path="/invest/:segment?" element={<Investpage />} />
         <Route path="/about/:section?" element={<Aboutdevs />} />
         
         

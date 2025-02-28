@@ -50,43 +50,7 @@ const attributes = [
   },
 ];
 
-const elements = [
-  {
-    name: "Commodities",
-    metric: "*",
-    description: "lorem ipsum defoe william gerred hhfhiuh.",
-    symbol: <IoIosInformationCircleOutline className="text-2xl" />,
-    img: <img src={img001} alt="" className="w-full p-2 h-auto" />,
-  },
-  {
-    name: "Crypto Indices",
-    metric: "*",
-    description: "lorem ipsum defoe william gerred hhfhiuh.",
-    symbol: <IoIosInformationCircleOutline className="text-2xl" />,
-    img: <img src={img004} alt="" className="w-full p-2 h-auto" />,
-  },
-  {
-    name: "Stocks",
-    metric: "*",
-    description: "lorem ipsum defoe william gerred hhfhiuh.",
-    symbol: <IoIosInformationCircleOutline className="text-2xl" />,
-    img: <img src={img002} alt="" className="w-full p-2 h-auto" />,
-  },
-  {
-    name: "NFTs",
-    metric: "*",
-    description: "lorem ipsum defoe william gerred hhfhiuh.",
-    symbol: <IoIosInformationCircleOutline className="text-2xl" />,
-    img: <img src={img001} alt="" className="w-full p-2 h-auto" />,
-  },
-  {
-    name: "Cryptocurrencies",
-    metric: "*",
-    description: "lorem ipsum defoe william gerred hhfhiuh.",
-    symbol: <IoIosInformationCircleOutline className="text-2xl" />,
-    img: <img src={img001} alt="" className="w-full p-2 h-auto" />,
-  },
-];
+// const elements = ;
 
 const traits = [
   {
@@ -233,35 +197,86 @@ const Home = () => {
           </h3>
           <div className="mt-10">
             <ul className="grid grid-cols-1 gap-10 tablet:grid-cols-2 xl:grid-cols-4">
-              {elements.map((element, index) => (
+              {[
+                {
+                  name: "Commodities",
+                  to: "/invest/commodities",
+                  metric: "*",
+                  description: "lorem ipsum defoe william gerred hhfhiuh.",
+                  symbol: (
+                    <IoIosInformationCircleOutline className="text-2xl" />
+                  ),
+                  img: (
+                    <img src={img001} alt="" className="w-full p-2 h-auto" />
+                  ),
+                  index: "commodities"
+                },
+                {
+                  name: "Crypto Indices",
+                  to: "/invest/crypto-indices",
+                  metric: "*",
+                  description: "lorem ipsum defoe william gerred hhfhiuh.",
+                  symbol: (
+                    <IoIosInformationCircleOutline className="text-2xl" />
+                  ),
+                  img: (
+                    <img src={img004} alt="" className="w-full p-2 h-auto" />
+                  ),
+                  index: "crypto-indices"
+                },
+                {
+                  name: "Stocks",
+                  to: "/invest/stocks",
+                  metric: "*",
+                  description: "lorem ipsum defoe william gerred hhfhiuh.",
+                  symbol: (
+                    <IoIosInformationCircleOutline className="text-2xl" />
+                  ),
+                  img: (
+                    <img src={img002} alt="" className="w-full p-2 h-auto" />
+                  ),
+                  index: "stocks",
+                },
+                {
+                  name: "Cryptocurrencies",
+                  to: "/invest/cryptocurrencies",
+                  metric: "*",
+                  description: "lorem ipsum defoe william gerred hhfhiuh.",
+                  symbol: (
+                    <IoIosInformationCircleOutline className="text-2xl" />
+                  ),
+                  img: (
+                    <img src={img001} alt="" className="w-full p-2 h-auto" />
+                  ),
+                  index: "cryptocurrencies",
+                },
+              ].map(({ name, to, metric, description, symbol, img, index }) => (
                 <Link
-                  to="/"
+                  to={to}
                   key={index}
                   className="p-3 bg-charcoal-gray rounded-lg transition-colors duration-300 group"
                 >
                   {/* Name and Metric (only for Commodities and Stocks) */}
                   <h3 className="text-2xl text-white-rice font-semibold flex items-center space-x-2 group-hover:text-teal">
-                    <span>{element.name}</span>
-                    {(element.name === "Commodities" ||
-                      element.name === "Stocks") && (
+                    <span>{name}</span>
+                    {(name === "Commodities" || name === "Stocks") && (
                       <span className="text-3xl text-gray-300 group-hover:text-teal">
-                        {element.metric}
+                        {metric}
                       </span>
                     )}
                   </h3>
 
                   {/* Description and Symbol */}
                   <p className="mt-4 text-lg text-gray-400 flex items-center space-x-2 font-mono xl:text-xl group-hover:text-teal">
-                    <span>{element.description}</span>
-                    {(element.name === "Commodities" ||
-                      element.name === "Stocks") && (
-                      <span className="text-teal">{element.symbol}</span>
+                    <span>{description}</span>
+                    {(name === "Commodities" || name === "Stocks") && (
+                      <span className="text-teal">{symbol}</span>
                     )}
                   </p>
 
                   {/* Image */}
                   <div className="mt-5 transition-transform duration-300 ease-in-out group-hover:translate-x-2 group-hover:-translate-y-2">
-                    {element.img}
+                    {img}
                   </div>
                 </Link>
               ))}
