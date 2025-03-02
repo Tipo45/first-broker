@@ -99,12 +99,12 @@ const Footer = () => {
             <div className="pl-2">
               <ul>
                 <li className="p-2">
-                  <Link to="/about/tipodev" className="text-teal underline">
+                  <Link to="/about-devs/tipo-dev" className="text-teal underline">
                     Tipo Developers
                   </Link>
                 </li>
                 <li className="p-2">
-                  <Link to="/about/meettheteam" className="text-teal underline">
+                  <Link to="/about-devs/meet-the-team" className="text-teal underline">
                     Meet the Team
                   </Link>
                 </li>
@@ -202,20 +202,7 @@ const Footer = () => {
             </li>
           </ul>
         </section>
-        {/* Payment Icons */}
-        {/* <ul className="flex justify-center gap-6 mt-5">
-          {[paypalimg, stripeimg, masterimg, visaimg].map((img, index) => (
-            <li key={index}>
-              <a href="#">
-                <img
-                  src={img}
-                  alt="Payment logo"
-                  className="w-16 xl:w-20 bg-transparent hover:bg-blue-100 rounded-xl p-2 transition-all"
-                />
-              </a>
-            </li>
-          ))}
-        </ul> */}
+        
       </div>
     </footer>
   );

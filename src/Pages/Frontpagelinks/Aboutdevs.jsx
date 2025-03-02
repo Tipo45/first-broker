@@ -4,33 +4,36 @@ import Footer from "../../Components/Footer/Footer";
 import Header from "../../Components/Header/Header";
 import Meettheteam from "../../Components/Home Page/Meettheteam";
 import Tipodev from "../../Components/Home Page/Tipodev";
+import Nopage from "../404";
 
 const Aboutdevs = () => {
-  const { section } = useParams(); // Get the route parameter
+  const { sectionpage } = useParams();
+
+  const validPages = ["tipo-dev", "meet-the-team"];
+
+ 
+  const isValidPage = validPages.includes(sectionpage);
 
   return (
     <section>
-      <Header />
-      <div className="mt-20 px-4">
-        <Link to="/">
-          <div className="inline-flex items-center p-2 rounded-full hover:bg-gray-500 transition duration-300 group">
-            <FaArrowAltCircleLeft className="text-2xl text-black-spider group-hover:text-white-rice" />
+      {isValidPage ? (
+        <section>
+          <Header />
+          <div className="mt-20 px-4">
+            <Link to="/">
+              <div className="inline-flex items-center p-2 rounded-full hover:bg-gray-500 transition duration-300 group">
+                <FaArrowAltCircleLeft className="text-2xl text-black-spider group-hover:text-white-rice" />
+              </div>
+            </Link>
+
+            {sectionpage === "tipo-dev" && <Tipodev />}
+            {sectionpage === "meet-the-team" && <Meettheteam />}
           </div>
-        </Link>
-
-        {/* Conditionally render components based on the route parameter */}
-        {section === "tipodev" && <Tipodev />}
-        {section === "meettheteam" && <Meettheteam />}
-
-        {/* Default rendering if no section is specified */}
-        {!section && (
-          <>
-            <Tipodev />
-            <Meettheteam />
-          </>
-        )}
-      </div>
-      <Footer />
+          <Footer />
+        </section>
+      ) : (
+        <Nopage />
+      )}
     </section>
   );
 };

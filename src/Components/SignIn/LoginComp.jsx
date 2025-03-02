@@ -1,3 +1,4 @@
+import { FaSpinner } from "react-icons/fa";
 import { RxCaretLeft } from "react-icons/rx";
 import { Link } from "react-router-dom";
 
@@ -54,7 +55,9 @@ const LoginComp = () => {
                 <button
                   type="submit"
                   className="w-full cursor-pointer bg-teal hover:bg-darker-teal text-white-rice text-lg font-semibold p-3 rounded-3xl mt-3"
-                >
+                > <svg className="mr-3 size-5 animate-spin" viewBox="0 0 24 24"><FaSpinner />
+    
+                </svg>
                   Sign In
                 </button>
               </Link>

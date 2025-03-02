@@ -6,7 +6,7 @@ const Apply = () => {
     <section>
       <div className="px-4 py-16 rounded-2xl mb-10 bg-light-gray">
         <div className="flex justify-center">
-          <h2 className="text-xl text-spider-black font-bold">Register with us @ Tipo&apos;s Broker</h2>
+          <h2 className="text-xl text-spider-black font-bold text-center">Register with us @ Tipo&apos;s Broker</h2>
         </div>
         <div className="flex justify-center mt-2">
           <p className="text-gray-500 text-lg">Open an account with us today!</p>

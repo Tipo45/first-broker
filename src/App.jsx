@@ -12,6 +12,7 @@ import Verificationupload from "./Components/UserAccount/Verificationupload";
 import Homelinks from "./Pages/Frontpagelinks/Homelinks";
 import Aboutdevs from "./Pages/Frontpagelinks/Aboutdevs";
 import Investpage from "./Pages/Frontpagelinks/Investpage";
+import Nopage from "./Pages/404";
 
 
 
@@ -24,19 +25,17 @@ function App() {
         <Route path="/registration" element={<Registration />} />
         <Route path="/user_account/:activepage" element={<Useraccount />} />
         <Route path="/user_account/account-information" element={<Accountinformation />} />
-        <Route path="/user_acccount/account-information/user-account/change-name" element={<Namesettings />} />
-        <Route path="/user_acccount/account-information/user-account/change-username" element={<Usernamesettings />} />
-        <Route path="/user_acccount/account-information/user-account/change-password" element={<Changeofpassword />} />
-        <Route path="/user_acccount/account-information/user-account/ID-upload" element={<Verificationupload />} />
-        <Route path="/:accessedpage" element={<Homelinks />} />
-        <Route path="/invest/:segment?" element={<Investpage />} />
-        <Route path="/about/:section?" element={<Aboutdevs />} />
-        
-        
+        <Route path="/user_account/account-information/user-account/change-name" element={<Namesettings />} />
+        <Route path="/user_account/account-information/user-account/change-username" element={<Usernamesettings />} />
+        <Route path="/user_account/account-information/user-account/change-password" element={<Changeofpassword />} />
+        <Route path="/user_account/account-information/user-account/ID-upload" element={<Verificationupload />} />
+        <Route path="/invest/:segmentpage" element={<Investpage />} />
+        <Route path="/about-devs/:sectionpage" element={<Aboutdevs />} />
+        <Route path="/about-us/:accessedpage" element={<Homelinks />} />
 
 
-        <Route path="*" element />
-        
+
+        <Route path="*" element={<Nopage />} />
       </Routes>
     </BrowserRouter>
   );
