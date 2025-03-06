@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
 import { FaExchangeAlt, FaUser, FaSignOutAlt, FaChartLine } from "react-icons/fa";
 import { FaWallet } from "react-icons/fa6";
 import { RxDashboard } from "react-icons/rx";
+import PropTypes from "prop-types";
 
 
-//eslint-disable-next-line react/prop-types
 const Usersidebar = ({ activepage }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -99,6 +98,10 @@ const Usersidebar = ({ activepage }) => {
       </div>
     </section>
   );
+};
+
+Usersidebar.propTypes = {
+  activepage: PropTypes.string.isRequired,
 };
 
 export default Usersidebar;

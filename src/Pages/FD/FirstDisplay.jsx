@@ -45,7 +45,7 @@ const FirstDisplay = () => {
       </main>
       <Footer />
       <button
-        className="fixed bottom-8 right-8 p-4 bg-teal text-white-rice rounded-full shadow-lg hover:bg-darker-teal transition-all duration-300 z-50"
+        className="fixed bottom-8 right-8 p-4 bg-teal text-white-rice rounded-full shadow-lg cursor-pointer hover:bg-darker-teal transition-all duration-300 z-50"
         onClick={() => scrollTo(isAtTop ? "bottom" : "top")}
         aria-label={isAtTop ? "Scroll to bottom" : "Scroll to top"}
       >

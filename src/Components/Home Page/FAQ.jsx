@@ -2,37 +2,35 @@ import { useState } from "react";
 import { FaMinus, FaPlus } from "react-icons/fa6";
 
 const FAQ = () => {
+  const [openDropdown, setOpenDropdown] = useState(null);
 
-    const [openDropdown, setOpenDropdown] = useState(null);
-    
-      // Function to toggle dropdown
-      const toggleDropdown = (id) => {
-        setOpenDropdown(openDropdown === id ? null : id);
-      };
+  // Function to toggle dropdown
+  const toggleDropdown = (id) => {
+    setOpenDropdown(openDropdown === id ? null : id);
+  };
 
-      const faqData = [
-        {
-          id: "dropdown1",
-          question: "What are the fees and charges?",
-          answer:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum nisi fugit ipsam iusto deserunt.",
-        },
-        {
-          id: "dropdown2",
-          question: "How do I get started?",
-          answer:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum nisi fugit ipsam iusto deserunt.",
-        },
-        {
-          id: "dropdown3",
-          question: "Are my funds safe?",
-          answer:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum nisi fugit ipsam iusto deserunt.",
-        },
-      ];
-    
+  const faqData = [
+    {
+      id: "dropdown1",
+      question: "What are the fees and charges?",
+      answer:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum nisi fugit ipsam iusto deserunt.",
+    },
+    {
+      id: "dropdown2",
+      question: "How do I get started?",
+      answer:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum nisi fugit ipsam iusto deserunt.",
+    },
+    {
+      id: "dropdown3",
+      question: "Are my funds safe?",
+      answer:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum nisi fugit ipsam iusto deserunt.",
+    },
+  ];
+
   return (
-
     <section>
       <div className="px-6 py-6 mt-2">
         <h2 className="text-3xl font-semibold mb-12 text-center">
@@ -68,8 +66,7 @@ const FAQ = () => {
         </div>
       </div>
     </section>
-    
-  )
-}
+  );
+};
 
-export default FAQ
+export default FAQ;

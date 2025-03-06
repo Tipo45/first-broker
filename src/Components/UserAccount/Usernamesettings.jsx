@@ -21,15 +21,6 @@ const Usernamesettings = () => {
         </div>
 
         <div className=" mt-25 px-2 grid grid-cols-1">
-          {/* <div className="flex justify-center relative">
-            <span className="text-md text-white-rice font-medium absolute pb-4 right-37 top-2 bg-transparent">
-              Current Username:
-            </span>
-            <span className="bg-gray-400 p-8 w-full rounded-lg text-lg font-semibold text-center">
-              Tipo45
-            </span>
-          </div> */}
-
           <div className="flex justify-center">
             <input
               type="text"
@@ -39,7 +30,12 @@ const Usernamesettings = () => {
           </div>
         </div>
         <div className="flex justify-center mt-8">
-        <button type="submit" className="bg-teal hover:bg-darker-teal p-4 text-lg cursor-pointer font-medium text-white-rice rounded-lg">Submit</button>
+          <button
+            type="submit"
+            className="bg-teal hover:bg-darker-teal p-4 text-lg cursor-pointer font-medium text-white-rice rounded-lg"
+          >
+            Submit
+          </button>
         </div>
       </div>
     </section>

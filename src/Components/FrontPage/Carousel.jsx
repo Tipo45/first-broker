@@ -19,7 +19,7 @@ const Frontcarousel = () => {
                 hundred of companies across global markets.
               </p>
               <Link to="/registration" className="">
-                <button className="relative bg-teal text-white-rice text-lg font-bold outline-none p-4 rounded-2xl border-2 border-transparent overflow-hidden group hover:text-black-spider transition-colors duration-300 ease-in-out">
+                <button className="relative bg-teal text-white-rice text-lg cursor-pointer font-bold outline-none p-4 rounded-2xl border-2 border-transparent overflow-hidden group hover:text-black-spider transition-colors duration-300 ease-in-out">
                   <span className="relative z-10">Open an account</span>
                   <div className="absolute inset-y-0 left-[-100%] w-full bg-white border-1 border-darker-teal transition-all duration-300 ease-in-out group-hover:left-0 z-0"></div>
                 </button>

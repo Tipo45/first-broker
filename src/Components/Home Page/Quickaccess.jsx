@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
-// eslint-disable-next-line react/prop-types
+
 const Quickaccess = ({ accessedpage }) => {
   return (
     <section>
@@ -11,7 +12,7 @@ const Quickaccess = ({ accessedpage }) => {
           </h3>
         </div>
         <ul>
-          {/* Asset Management Link */}
+          
           {accessedpage === "asset-management" ? (
             <li className="px-4 py-1 text-white-rice">Asset Management</li>
           ) : (
@@ -22,7 +23,7 @@ const Quickaccess = ({ accessedpage }) => {
             </li>
           )}
 
-          {/* Commission Account Link */}
+          
           {accessedpage === "commission-account" ? (
             <li className="px-4 py-1 text-white-rice">Commission Account</li>
           ) : (
@@ -33,7 +34,7 @@ const Quickaccess = ({ accessedpage }) => {
             </li>
           )}
 
-          {/* Brokerage Link */}
+          
           {accessedpage === "brokerage" ? (
             <li className="px-4 py-1 text-white-rice">Brokerage</li>
           ) : (
@@ -47,6 +48,10 @@ const Quickaccess = ({ accessedpage }) => {
       </div>
     </section>
   );
+};
+
+Quickaccess.propTypes = {
+  accessedpage: PropTypes.string,
 };
 
 export default Quickaccess;
