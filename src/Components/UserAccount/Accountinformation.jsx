@@ -4,11 +4,15 @@ import {
   FaRegEdit,
 } from "react-icons/fa";
 import Usersidebar from "./Usersidebar";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { RiDeleteBin5Line } from "react-icons/ri";
 import { IoIosArrowDropright, IoMdAddCircleOutline } from "react-icons/io";
+import { deleteaccount } from "../../lib/pocketbase";
+import { useClientData } from "../../hooks/useClientData";
 
 const Accountinformation = () => {
+  const navigate = useNavigate();
+  const {data} = useClientData();
   return (
     <section className="flex">
       {/* Sidebar */}
@@ -39,7 +43,7 @@ const Accountinformation = () => {
               <div className="bg-gray-300 p-4 rounded-2xl relative">
                 <span className="text-lg font-semibold">First Name:</span>
                 <span className="block mt-2 text-lg font-medium text-gray-600">
-                  Steven
+                  {data?.firstname}
                 </span>
                 <Link to="/user_acccount/account-information/user-account/change-name">
                   <FaRegEdit className="absolute top-4 right-4 text-lg text-white cursor-pointer" />
@@ -50,7 +54,7 @@ const Accountinformation = () => {
               <div className="bg-gray-300 p-4 rounded-2xl relative">
                 <span className="text-lg font-semibold">Last Name:</span>
                 <span className="block mt-2 text-lg font-medium text-gray-600">
-                  Azebi-Alex
+                  {data?.lastname}
                 </span>
                 <Link to="/user_acccount/account-information/user-account/change-name">
                   <FaRegEdit className="absolute top-4 right-4 text-lg text-white cursor-pointer" />
@@ -61,7 +65,7 @@ const Accountinformation = () => {
               <div className="bg-gray-300 p-4 rounded-2xl relative">
                 <span className="text-lg font-semibold">Username:</span>
                 <span className="block mt-2 text-lg font-medium text-gray-600">
-                  tipo45
+                  
                 </span>
                 <Link to="/user_acccount/account-information/user-account/change-username">
                   <FaRegEdit className="absolute top-4 right-4 text-lg text-white cursor-pointer" />
@@ -72,7 +76,7 @@ const Accountinformation = () => {
               <div className="bg-gray-300 p-4 rounded-2xl">
                 <span className="text-lg font-semibold">Email:</span>
                 <span className="block mt-2 text-lg font-medium text-gray-600">
-                  tipo4542@gmail.com
+                  {data?.email}
                 </span>
               </div>
 
@@ -80,7 +84,7 @@ const Accountinformation = () => {
               <div className="bg-gray-300 p-4 rounded-2xl">
                 <span className="text-lg font-semibold">Country:</span>
                 <span className="block mt-2 text-lg font-medium text-gray-600">
-                  Nigeria
+                  
                 </span>
               </div>
             </div>
@@ -109,14 +113,14 @@ const Accountinformation = () => {
                 <span className="text-lg font-semibold text-white-rice">
                   Change Password
                 </span>
-                <IoIosArrowDropright className="absolute top-245 tablet:top-189 right-10 text-3xl text-white transition-all duration-300 group-hover:translate-x-2" />
+                <IoIosArrowDropright className="absolute top-231 tablet:top-189 right-10 text-3xl text-white transition-all duration-300 group-hover:translate-x-2" />
               </div>
             </Link>
           </section>
 
           {/* Delete Account Button */}
           <div className="flex justify-center mt-8">
-            <button className="flex items-center bg-red-600 p-4 rounded-xl text-white-rice font-semibold text-xl hover:bg-red-500 transition duration-300">
+            <button onClick={() => {deleteaccount(), navigate("/")}} className="flex items-center bg-red-600 p-4 rounded-xl text-white-rice font-semibold text-xl hover:bg-red-500 transition duration-300">
               <RiDeleteBin5Line className="text-2xl mr-2" />
               Delete Account
             </button>

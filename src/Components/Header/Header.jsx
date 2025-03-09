@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -16,9 +17,6 @@ const Header = () => {
     setIsOpen(false);
   };
 
-  const [openDropdown, setOpenDropdown] = useState(null);
-
-  // Function to toggle dropdown
   const toggleDropdown = (id) => {
     setOpenDropdown(openDropdown === id ? null : id);
   };
@@ -27,13 +25,19 @@ const Header = () => {
     <header className="fixed top-0 left-0 w-full h-15 bg-dark-blue shadow-md z-50">
       {/* Navbar */}
       <nav className="px-5 py-3 flex justify-between items-center">
-        <h3 className="text-3xl font-bold font-primary">
-          <Link to="/" className="text-white">Tipo&apos;s</Link>
+        <h3
+          className="text-3xl font-bold font-primary"
+          data-aos="zoom-in"
+          data-aos-duration="2000"
+        >
+          <Link to="/" className="text-white">
+            Tipo&apos;s
+          </Link>
         </h3>
 
         {/* Links for Large Screens */}
         <ul className="hidden xl:flex space-x-10 text-3xl font-secondary">
-          <li>
+          <li data-aos="zoom-in" data-aos-duration="2000">
             <Link
               to="/registration"
               className="text-white bg-transparent hover:bg-charcoal-gray p-2 rounded-xl"
@@ -41,7 +45,7 @@ const Header = () => {
               Sign up
             </Link>
           </li>
-          <li>
+          <li data-aos="zoom-in" data-aos-duration="2000">
             <Link
               to="/login"
               className="text-white bg-charcoal-gray hover:bg-white hover:text-black-spider p-2 rounded-xl"
@@ -55,6 +59,8 @@ const Header = () => {
         <button
           onClick={toggleMenu}
           className="text-2xl cursor-pointer text-white font-bold focus:outline-none xl:hidden transition-transform duration-300 ease-in-out"
+          data-aos="zoom-in"
+          data-aos-duration="2000"
         >
           {isOpen ? <FaTimes /> : <RiMenu2Line />}
         </button>
@@ -68,12 +74,15 @@ const Header = () => {
           }`}
       >
         {/* Menu Items with Spacing */}
-        <div className="space-y-6 mt-2 text-xl font-secondary text-left">
+        <div className="space-y-6 mt-2 text-xl font-secondary text-left ">
           {/* Markets Dropdown */}
 
           <div>
             <div
-              className="flex justify-between items-center cursor-pointer"
+              className={`flex justify-between items-center cursor-pointer ${
+                isOpen ? "animate-fade-right" : "opacity-0"
+              }`}
+              style={{ animationDelay: isOpen ? "0.2s" : "0s" }}
               onClick={() => toggleDropdown("dropdown1")}
             >
               <p className="text-xl font-semibold">Markets</p>
@@ -91,10 +100,22 @@ const Header = () => {
               <div className="pl-2">
                 <ul className="p-0">
                   <li className="p-2">
-                    <Link to="/about-us/asset-management" onClick={closeMenu} className="text-gray-700 hover:text-black-spider">Asset Management</Link>
+                    <Link
+                      to="/about-us/asset-management"
+                      onClick={closeMenu}
+                      className="text-gray-700 hover:text-black-spider"
+                    >
+                      Asset Management
+                    </Link>
                   </li>
                   <li className="p-2">
-                    <Link to="/about-us/asset-management" onClick={closeMenu} className="text-gray-700 hover:text-black-spider">Details</Link>
+                    <Link
+                      to="/about-us/asset-management"
+                      onClick={closeMenu}
+                      className="text-gray-700 hover:text-black-spider"
+                    >
+                      Details
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -104,7 +125,10 @@ const Header = () => {
           {/* Banking Services Dropdown */}
           <div>
             <div
-              className="flex justify-between items-center cursor-pointer"
+              className={`flex justify-between items-center cursor-pointer ${
+                isOpen ? "animate-fade-right" : "opacity-0"
+              }`}
+              style={{ animationDelay: isOpen ? "0.4s" : "0s" }}
               onClick={() => toggleDropdown("dropdown3")}
             >
               <p className="text-xl font-semibold">Banking Services</p>
@@ -122,10 +146,22 @@ const Header = () => {
               <div className="pl-2">
                 <ul className="p-0">
                   <li className="p-2">
-                    <Link to="/about-us/commission-account" onClick={closeMenu} className="text-gray-700 hover:text-black-spider">Commission Account</Link>
+                    <Link
+                      to="/about-us/commission-account"
+                      onClick={closeMenu}
+                      className="text-gray-700 hover:text-black-spider"
+                    >
+                      Commission Account
+                    </Link>
                   </li>
                   <li className="p-2">
-                    <Link to="/about-us/commission-account" onClick={closeMenu} className="text-gray-700 hover:text-black-spider">Standard Account</Link>
+                    <Link
+                      to="/about-us/commission-account"
+                      onClick={closeMenu}
+                      className="text-gray-700 hover:text-black-spider"
+                    >
+                      Standard Account
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -135,7 +171,10 @@ const Header = () => {
           {/* Trading Dropdown */}
           <div>
             <div
-              className="flex justify-between items-center cursor-pointer"
+              className={`flex justify-between items-center cursor-pointer ${
+                isOpen ? "animate-fade-right" : "opacity-0"
+              }`}
+              style={{ animationDelay: isOpen ? "0.6s" : "0s" }}
               onClick={() => toggleDropdown("dropdown2")}
             >
               <p className="text-xl font-semibold">Trading</p>
@@ -153,10 +192,22 @@ const Header = () => {
               <div className="pl-2">
                 <ul className="p-0">
                   <li className="p-2">
-                    <Link to="/about-us/brokerage" onClick={closeMenu} className="text-gray-700 hover:text-black-spider">Platform</Link>
+                    <Link
+                      to="/about-us/brokerage"
+                      onClick={closeMenu}
+                      className="text-gray-700 hover:text-black-spider"
+                    >
+                      Platform
+                    </Link>
                   </li>
                   <li className="p-2">
-                    <Link to="/about-us/brokerage" onClick={closeMenu} className="text-gray-700 hover:text-black-spider">Brokerage</Link>
+                    <Link
+                      to="/about-us/brokerage"
+                      onClick={closeMenu}
+                      className="text-gray-700 hover:text-black-spider"
+                    >
+                      Brokerage
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -167,13 +218,23 @@ const Header = () => {
         {/* Account Button */}
         <div className="flex justify-center items-center mt-60 gap-5">
           <Link to="/registration">
-            <button className="px-6 py-3 text-xl cursor-pointer bg-charcoal-gray text-white font-semibold rounded-lg shadow-md hover:bg-dark-blue transition-transform duration-300 ease-in-out hover:-translate-y-2">
+            <button
+              className={`px-6 py-3 text-xl cursor-pointer bg-charcoal-gray text-white font-semibold rounded-lg shadow-md hover:bg-dark-blue transition-transform duration-300 ease-in-out hover:-translate-y-2 ${
+                isOpen ? "animate-fade-right" : "opacity-0"
+              }`}
+              style={{ animationDelay: isOpen ? "0.7s" : "0s" }}
+            >
               Sign up
             </button>
           </Link>
 
           <Link to="/login">
-            <button className="px-6 py-3 text-xl cursor-pointer bg-charcoal-gray text-white font-semibold rounded-lg shadow-md hover:bg-dark-blue transition-transform duration-300 ease-in-out hover:-translate-y-2">
+            <button
+              className={`px-6 py-3 text-xl cursor-pointer bg-charcoal-gray text-white font-semibold rounded-lg shadow-md hover:bg-dark-blue transition-transform duration-300 ease-in-out hover:-translate-y-2 ${
+                isOpen ? "animate-fade-left" : "opacity-0"
+              }`}
+              style={{ animationDelay: isOpen ? "0.7s" : "0s" }}
+            >
               Login
             </button>
           </Link>
@@ -181,17 +242,26 @@ const Header = () => {
 
         {/* Social Media Links */}
         <ul className="flex justify-center gap-6 mt-15 xl:hidden">
-          <li>
+          <li
+            className={isOpen ? "animate-fade-down" : "opacity-0"}
+            style={{ animationDelay: isOpen ? "0.9s" : "0s" }}
+          >
             <Link to="/">
               <FaTelegram className="text-3xl text-blue-500 cursor-pointer hover:text-blue-400 transition-transform duration-300 ease-in-out hover:-translate-y-2" />
             </Link>
           </li>
-          <li>
+          <li
+            className={isOpen ? "animate-fade-down" : "opacity-0"}
+            style={{ animationDelay: isOpen ? "1.1s" : "0s" }}
+          >
             <Link to="/">
               <FaWhatsapp className="text-3xl text-green-500 cursor-pointer hover:text-green-400 transition-transform duration-300 ease-in-out hover:-translate-y-2" />
             </Link>
           </li>
-          <li>
+          <li
+            className={isOpen ? "animate-fade-down" : "opacity-0"}
+            style={{ animationDelay: isOpen ? "1.3s" : "0s" }}
+          >
             <Link to="/">
               <FaTwitter className="text-3xl text-blue-600 cursor-pointer hover:text-blue-500 transition-transform duration-300 ease-in-out hover:-translate-y-2" />
             </Link>

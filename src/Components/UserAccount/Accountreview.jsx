@@ -32,7 +32,7 @@ const Accountreview = () => {
           </div>
 
           <div className="grid grid-cols-1 gap-2 -mt-5">
-            <div className="flex justify-between items-center text-white bg-gray-600 p-2 rounded-lg font-medium">
+            <div className="flex justify-between items-center text-white bg-gray-600 p-2 rounded-lg font-medium animate-fade-left">
               <span className="flex items-center text-xs">
                 <MdPending className="mr-1 text-lg xl:max-4xl:text-lg" />{" "}
                 Pending
@@ -43,7 +43,7 @@ const Accountreview = () => {
               </span>
             </div>
 
-            <div className="flex justify-between items-center text-white bg-green-700 p-2 rounded-lg font-medium">
+            <div className="flex justify-between items-center text-white bg-green-700 p-2 rounded-lg font-medium animate-fade-left">
               <span className="flex items-center text-xs">
                 <MdOutlineGppGood className="mr-1 text-lg xl:max-4xl:text-lg" />{" "}
                 Success
@@ -54,7 +54,7 @@ const Accountreview = () => {
               </span>
             </div>
 
-            <div className="flex justify-between items-center text-white bg-red-600 p-1 rounded-lg font-medium">
+            <div className="flex justify-between items-center text-white bg-red-600 p-1 rounded-lg font-medium animate-fade-left">
               <span className="flex items-center text-xs">
                 <MdOutlineSmsFailed className="mr-1 ml-1 text-lg xl:max-4xl:text-lg" />{" "}
                 Failed

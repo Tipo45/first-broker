@@ -8,15 +8,17 @@ import {
 import Transactions from "./Transactions";
 import { Link } from "react-router-dom";
 import Accountreport from "./Accountreview";
+import { useClientData } from "../../hooks/useClientData";
 
 const Userdashbboard = () => {
+  const {data} = useClientData()
   return (
     <section>
-      <div className="bg-gray-200 p-4 rounded-lg mt-1 w-full">
+      <div className="bg-gray-200 p-4 rounded-lg mt-1 w-full animate-fade-up">
         <div className="flex justify-between">
-          <h5 className="font-semibold">Hi, <span className="text-teal font-semibold">User234</span></h5>
+          <h5 className="font-semibold animate-zoom-in">Hi, <span className="text-teal font-semibold">{data?.firstname}</span></h5>
           <Link to="/user_account/account-information">
-            <div className="bg-dark-blue p-4 rounded-3xl group hover:bg-charcoal-gray">
+            <div className="bg-dark-blue p-4 rounded-3xl group hover:bg-charcoal-gray animate-zoom-out">
               <FaUserAlt className="text-teal group-hover:text-white-rice" />
             </div>
           </Link>
@@ -60,7 +62,7 @@ const Userdashbboard = () => {
       </div>
 
       <div className="grid grid-cols-1 gap-2 tablet:max-4xl:grid-cols-2">
-        <div className="p-4 mt-2 bg-gray-400 rounded-lg">
+        <div className="p-4 mt-2 bg-gray-400 rounded-lg animate-fade-right">
           <Accountreport />
         </div>
 

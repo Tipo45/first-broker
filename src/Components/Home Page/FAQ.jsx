@@ -33,13 +33,13 @@ const FAQ = () => {
   return (
     <section>
       <div className="px-6 py-6 mt-2">
-        <h2 className="text-3xl font-semibold mb-12 text-center">
+        <h2 className="text-3xl font-semibold mb-12 text-center" data-aos="fade-down" data-aos-duration="1000">
           Frequently Asked Questions
         </h2>
         <div>
           {/** FAQ Items */}
           {faqData.map(({ id, question, answer }) => (
-            <div key={id}>
+            <div key={id} data-aos="fade-right" data-aos-duration="2000">
               <div
                 className="flex justify-between items-center cursor-pointer"
                 onClick={() => toggleDropdown(id)}

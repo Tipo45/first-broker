@@ -102,7 +102,7 @@ const Cryptoindices = () => {
         {icon: <SiHedera className="text-[#282828] mt-0.5 mr-3 text-2xl" />, description: "Hedera"},
         {icon: <SiInternetcomputer
           className="text-gradient-to-r from-[#00FFA3] to-[#DC1FFF] mt-0.5 mr-3 text-2xl " />, description: "Internet Computer"},
-        {icon: <SiSui  className="mt-0.5 mr-3 text-2xl" />, description: "Sui"},
+        {icon: <SiSui  className="text-[#6AC8FE] mt-0.5 mr-3 text-2xl" />, description: "Sui"},
         {icon: <SiAlgorand className="mt-0.5 mr-3 text-2xl" />, description: "Algorand"},
         {icon: <SiNear className="mt-0.5 mr-3 text-2xl" />, description: "NEAR Protocol"},
       ],

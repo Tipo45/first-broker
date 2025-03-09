@@ -2,6 +2,8 @@ import Lottie from "lottie-react";
 import Animation2 from "../../assets/Animated Icons/Animation-2.json";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import Apply from "./Apply";
+import Testimony from "./Testimony";
 
 const GetStartedButton = () => {
   return (
@@ -57,6 +59,15 @@ const Cryptocurrencies = () => {
           demonstration purposes, and does not guarantee future results.
         </p>
       </section>
+
+       <section className="mt-10 mb-20">
+              <Testimony />
+            </section>
+      
+            <section className="mb-20">
+              <SectionTitle title="Join thousands of people on Tipo's broker" />
+              <Apply />
+            </section>
     </section>
   );
 };

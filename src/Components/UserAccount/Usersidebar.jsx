@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaExchangeAlt, FaUser, FaSignOutAlt, FaChartLine } from "react-icons/fa";
 import { FaWallet } from "react-icons/fa6";
 import { RxDashboard } from "react-icons/rx";
 import PropTypes from "prop-types";
+import { logout } from "../../lib/pocketbase";
 
 
 const Usersidebar = ({ activepage }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleResize = () => {
@@ -83,7 +85,7 @@ const Usersidebar = ({ activepage }) => {
           )}</Link>
         </div>
 
-        <button className="mt-4 flex items-center p-2 rounded-lg hover:bg-red-500 transition-colors duration-200 w-full relative group">
+        <button onClick={() => {logout(), navigate("/")}} className="mt-4 flex items-center p-2 rounded-lg hover:bg-red-500 transition-colors duration-200 w-full relative group">
           <FaSignOutAlt className="h-6 w-6" />
           {isExpanded && <span className="ml-2">Logout</span>}
           {!isExpanded && (

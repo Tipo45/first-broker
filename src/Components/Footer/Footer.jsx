@@ -22,7 +22,7 @@ const Footer = () => {
     <footer className="w-full py-16 px-5 bg-dark-blue shadow-[0px_-4px_10px_rgba(0,0,0,0.2)]">
       {/* Call to Action Section */}
       <section className="text-center mb-10">
-        <p className="mb-6 text-white-rice text-3xl xl:text-4xl font-semibold">
+        <p className="mb-6 text-white-rice text-3xl xl:text-4xl font-semibold" data-aos="zoom-in" data-aos-duration="2000">
           Join more than 1,500 investors worldwide that buy, sell & swap crypto
           with us.
         </p>
@@ -30,7 +30,7 @@ const Footer = () => {
           <Link to="/registration">
             <button
               className="flex items-center gap-2 cursor-pointer text-lg font-medium bg-teal rounded-2xl px-8 py-4 text-white 
-  hover:bg-darker-teal xl:text-center  group"
+  hover:bg-darker-teal xl:text-center group" data-aos="zoom-out" data-aos-duration="3000"
             >
               Create an account
               <MdKeyboardArrowRight className="text-3xl mt-1 transition-transform duration-300 ease-in-out group-hover:translate-x-2" />
@@ -42,7 +42,7 @@ const Footer = () => {
       {/* Divider */}
       <hr className="border-t border-gray-400 my-10 mb-20" />
 
-      <section className="space-y-5">
+      <section className="space-y-5" data-aos="fade-right" data-aos-duration="2000">
         {/* Dropdown 1 */}
         <div>
           <div
@@ -126,7 +126,7 @@ const Footer = () => {
       <hr className="border-t border-gray-400 my-20" />
 
       {/* Newsletter Section */}
-      <section className="text-center bg-light-gray rounded-2xl p-6 mb-10">
+      <section className="text-center bg-light-gray rounded-2xl p-6 mb-10" data-aos="flip-right" data-aos-duration="2000">
         <h4 className="text-2xl text-black-spider font-semibold mb-3">
           Sign up for our Newsletter
         </h4>
@@ -152,7 +152,7 @@ const Footer = () => {
       {/* Social Media Links */}
 
       {/* Support & Live Chat */}
-      <section className="text-center mt-16">
+      <section className="text-center mt-16" data-aos="zoom-out" data-aos-duration="2000">
         <div className="bg-charcoal-gray p-6 rounded-lg">
           <p className="text-xl text-white-rice font-semibold">
             Need assistance?
@@ -177,13 +177,12 @@ const Footer = () => {
       <hr className="border-t border-gray-400 my-10" />
 
       {/* Footer Bottom */}
-      <div className="mt-10 text-center">
+      <div className="mt-10 text-center"  data-aos="fade-up" data-aos-duration="2000">
         <p className="text-teal">
           © 2025 Tipo Developers. All Rights Reserved.
         </p>
 
         <section className="text-center">
-          {/* <h3 className="text-2xl text-white font-semibold">Connect With Us</h3> */}
           <ul className="flex justify-center gap-8 mt-6">
             <li>
               <Link to="/">

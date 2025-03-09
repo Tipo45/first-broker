@@ -13,12 +13,26 @@ import Homelinks from "./Pages/Frontpagelinks/Homelinks";
 import Aboutdevs from "./Pages/Frontpagelinks/Aboutdevs";
 import Investpage from "./Pages/Frontpagelinks/Investpage";
 import Nopage from "./Pages/404";
+import AOS from "aos";
+import "aos/dist/aos.css"
+import { useEffect } from "react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 
 
 function App() {
+
+  const queryClient = new QueryClient();
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800, // Animation duration
+      once: true, // Whether animation should happen only once
+    });
+  }, []);
   return (
-    <BrowserRouter>
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>
       <Routes>
         <Route path="/" element={<FirstDisplay />} />
         <Route path="/login" element={<Clientlogin />} />
@@ -38,6 +52,8 @@ function App() {
         <Route path="*" element={<Nopage />} />
       </Routes>
     </BrowserRouter>
+    
+    </QueryClientProvider>
   );
 }
 

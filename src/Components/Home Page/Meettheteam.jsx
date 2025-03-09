@@ -1,3 +1,7 @@
+import Seniordev from "../../assets/Images/David_Washington.jpg";
+import UI_UX from "../../assets/Images/Kerry_Walsh.jpg";
+import Projlead from "../../assets/Images/Shanae_Williams.jpg";
+
 const Meettheteam = () => {
   return (
     <section>
@@ -18,18 +22,30 @@ const Meettheteam = () => {
             passion that motivates us.
           </p>
         </div>
-        <div className="grid grid-cols-3 gap-2 text-center">
-          <div>
-            <img src="" alt="" />
-            <span className="text-sm">The Senior Developer</span>
+        <div className="grid grid-cols-3 gap-4 text-center">
+          <div className="flex flex-col items-center">
+            <img
+              src={Seniordev}
+              alt=""
+              className="rounded-full w-16 h-16 object-cover border-2 border-teal"
+            />
+            <span className="text-sm mt-2">The Senior Developer</span>
           </div>
-          <div>
-            <img src="" alt="" />
-            <span className="text-sm">UI/UX</span>
+          <div className="flex flex-col items-center">
+            <img
+              src={UI_UX}
+              alt=""
+              className="rounded-full w-16 h-16 object-cover border-2 border-teal"
+            />
+            <span className="text-sm mt-2">UI/UX</span>
           </div>
-          <div>
-            <img src="" alt="" />
-            <span className="text-sm">Project Lead</span>
+          <div className="flex flex-col items-center">
+            <img
+              src={Projlead}
+              alt=""
+              className="rounded-full w-16 h-16 object-cover border-2 border-teal"
+            />
+            <span className="text-sm mt-2">Project Lead</span>
           </div>
         </div>
       </div>
