@@ -8,7 +8,8 @@ import PocketBase from "pocketbase";
     password,
     confirmpassword,
     firstname,
-    lastname
+    lastname,
+    username
   ) {
     const data = {
     "email": email,
@@ -16,12 +17,43 @@ import PocketBase from "pocketbase";
     "password": password,
     "passwordConfirm": confirmpassword,
     "firstname": firstname,
-    "lastname": lastname
+    "lastname": lastname,
+    "username" :username
     };
     await pb.collection("users").create(data);
     const record = await pb
       .collection("users")
       .authWithPassword(email, password);
+    return record;
+  }
+
+  export async function update_user(
+    newpassword,
+    confirmpassword,
+    password,
+    email,
+    firstname,
+    lastname,
+    username
+  ) {
+    const data = {
+    "password": newpassword,
+    "passwordConfirm": confirmpassword,
+    "oldPassword": password,
+    "email": email,
+    "emailVisibility": true,
+    "verified": true,
+    "firstname": firstname,
+    "lastname": lastname,
+    "username" :username
+    };
+    const id = pb.authStore.record.id;
+
+    const record = await pb.collection("users").update(id, data);
+    
+    //  await pb
+    //   .collection("users")
+    //   .authWithPassword(email, password);
     return record;
   }
 

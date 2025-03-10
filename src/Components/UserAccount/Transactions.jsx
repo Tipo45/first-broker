@@ -2,7 +2,7 @@ import { BiBarChartAlt2 } from "react-icons/bi";
 
 const Transactions = () => {
   return (
-    <div>
+    <div className="animate-zoom-in" style={{ animationDelay: "0.5s" }}>
       <div>
         <h1 className="text-lg font-medium mb-4">Recent Transactions</h1>
       </div>

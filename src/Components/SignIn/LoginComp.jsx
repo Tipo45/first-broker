@@ -39,7 +39,7 @@ const LoginComp = () => {
         const result = await login(email, password);
 
         if (result.record) {
-          navigate("/user_account/dashboard");
+          navigate("/user_account/dashboard?login=success");
         }
       } catch (error) {
         console.log(error);
@@ -108,7 +108,7 @@ const LoginComp = () => {
 
               {loading ? (
                 <button
-                  className="w-full cursor-pointer bg-darker-teal text-white-rice text-lg font-semibold p-3 rounded-3xl mt-3 flex justify-center"
+                  className="w-full cursor-not-allowed bg-darker-teal text-white-rice text-lg font-semibold p-3 rounded-3xl mt-3 flex justify-center"
                 >
                   <svg className="mr-3 size-8 text-light-gray animate-spin" viewBox="0 0 24 24">
                     <FaSpinner />

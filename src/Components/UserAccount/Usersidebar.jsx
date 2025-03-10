@@ -5,9 +5,11 @@ import { FaWallet } from "react-icons/fa6";
 import { RxDashboard } from "react-icons/rx";
 import PropTypes from "prop-types";
 import { logout } from "../../lib/pocketbase";
+import { useClientData } from "../../hooks/useClientData";
 
 
 const Usersidebar = ({ activepage }) => {
+  const {data} = useClientData();
   const [isExpanded, setIsExpanded] = useState(false);
   const navigate = useNavigate();
 
@@ -37,7 +39,7 @@ const Usersidebar = ({ activepage }) => {
       }`}
     >
       {/* Sidebar Header */}
-      <div className="flex items-center justify-between p-4">
+      <div className="flex items-center justify-between p-4 animate-zoom-in" style={{ animationDelay: "0.1s" }}>
       {isExpanded && <Link to="/"><h1 className="font-semibold text-lg">Tipo&apos;s Broker</h1></Link>}
       {!isExpanded && <Link to="/"><h1 className="font-semibold text-sm/5 -ml-1.5 tablet:max-4xl:hidden">Tipo&apos;s Broker</h1></Link>}
 
@@ -74,18 +76,18 @@ const Usersidebar = ({ activepage }) => {
       </nav>
 
       {/* User Info & Logout */}
-      <div className="mt-auto p-4 border-t border-light-gray">
+      <div className="mt-auto p-4 border-t border-light-gray animate-zoom-in" style={{ animationDelay: "0.8s" }}>
         <div className="flex items-center">
           <Link to="/user_account/account-information">{!isExpanded && <FaUser className="h-8 w-8 hover:text-teal" />}
           {isExpanded && (
             <div className="ml-0">
-              <p className="text-sm font-medium mb-1">John Doe</p>
-              <p className="text-xs text-gray-400">tipo4542@gmail.com</p>
+              <p className="text-sm font-medium mb-1">{data?.firstname}{" "}{data?.lastname}</p>
+              <p className="text-xs text-gray-400">{data?.email}</p>
             </div>
           )}</Link>
         </div>
 
-        <button onClick={() => {logout(), navigate("/")}} className="mt-4 flex items-center p-2 rounded-lg hover:bg-red-500 transition-colors duration-200 w-full relative group">
+        <button onClick={() => {logout(), navigate("/")}} className="mt-4 flex items-center p-2 rounded-lg cursor-pointer hover:bg-red-500 transition-colors duration-200 w-full relative group">
           <FaSignOutAlt className="h-6 w-6" />
           {isExpanded && <span className="ml-2">Logout</span>}
           {!isExpanded && (

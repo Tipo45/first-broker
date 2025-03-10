@@ -110,7 +110,7 @@ const RegistrationComp = () => {
       );
 
       if (result.record) {
-        navigate("/user_account/dashboard");
+        navigate("/user_account/dashboard?registered=true");
       }
     } catch (error) {
       console.log(error);
@@ -290,7 +290,7 @@ const RegistrationComp = () => {
 
               {/* Sign Up Button */}
               {loading ? (
-                <button className="w-full cursor-pointer bg-darker-teal text-white-rice text-lg font-semibold p-3 rounded-3xl mt-3 flex justify-center">
+                <button className="w-full bg-darker-teal text-white-rice text-lg font-semibold p-3 rounded-3xl mt-3 flex justify-center cursor-not-allowed">
                   <svg
                     className="mr-3 size-8 text-light-gray animate-spin"
                     viewBox="0 0 24 24"

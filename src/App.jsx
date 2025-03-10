@@ -5,9 +5,7 @@ import Clientlogin from "./Pages/Login/Clientlogin";
 import FirstDisplay from "./Pages/FD/FirstDisplay";
 import Registration from "./Pages/Login/Registration";
 import Accountinformation from "./Components/UserAccount/Accountinformation";
-import Namesettings from "./Components/UserAccount/Namesettings";
 import Usernamesettings from "./Components/UserAccount/Usernamesettings";
-import Changeofpassword from "./Components/UserAccount/Changeofpassword";
 import Verificationupload from "./Components/UserAccount/Verificationupload";
 import Homelinks from "./Pages/Frontpagelinks/Homelinks";
 import Aboutdevs from "./Pages/Frontpagelinks/Aboutdevs";
@@ -39,9 +37,7 @@ function App() {
         <Route path="/registration" element={<Registration />} />
         <Route path="/user_account/:activepage" element={<Useraccount />} />
         <Route path="/user_account/account-information" element={<Accountinformation />} />
-        <Route path="/user_account/account-information/user-account/change-name" element={<Namesettings />} />
-        <Route path="/user_account/account-information/user-account/change-username" element={<Usernamesettings />} />
-        <Route path="/user_account/account-information/user-account/change-password" element={<Changeofpassword />} />
+        <Route path="/user_account/account-information/user-account/edit-account" element={<Usernamesettings />} />
         <Route path="/user_account/account-information/user-account/ID-upload" element={<Verificationupload />} />
         <Route path="/invest/:segmentpage" element={<Investpage />} />
         <Route path="/about-devs/:sectionpage" element={<Aboutdevs />} />
