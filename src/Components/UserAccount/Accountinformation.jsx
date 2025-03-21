@@ -1,6 +1,7 @@
 import {
   FaArrowAltCircleLeft,
   FaRegAddressCard,
+  FaRegEdit,
 } from "react-icons/fa";
 import Usersidebar from "./Usersidebar";
 import { Link, useNavigate } from "react-router-dom";
@@ -8,30 +9,10 @@ import { RiDeleteBin5Line } from "react-icons/ri";
 import { IoIosArrowDropright, IoMdAddCircleOutline } from "react-icons/io";
 import { deleteaccount } from "../../lib/pocketbase";
 import { useClientData } from "../../hooks/useClientData";
-import { useEffect } from "react";
-import { toast } from "react-toastify";
 
 const Accountinformation = () => {
 
-  useEffect(() => {
-      const searchParams = new URLSearchParams(window.location.search);
-      if (searchParams.get("update") === "successfull") {
-        toast.success("Update successful!", {
-          position: "bottom-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
-
-        setTimeout(() => {
-          const cleanUrl = window.location.origin + window.location.pathname;
-          window.history.replaceState({}, document.title, cleanUrl);
-        }, 100);
-      }
-    }, []);
+  
 
   const navigate = useNavigate();
   const { data } = useClientData();
@@ -62,31 +43,28 @@ const Accountinformation = () => {
             <h2 className="text-2xl font-bold mb-4">Personal Info:</h2>
             <div className="grid grid-cols-1 gap-4 tablet:grid-cols-2">
               {/* First Name */}
-              <div className="bg-gray-300 p-4 rounded-2xl relative">
-                <span className="text-lg font-semibold">First Name:</span>
+              <div className="bg-gray-300 p-4 rounded-2xl relative" data-aos="zoom-in-right">
+                <span className="text-lg font-semibold">Full Name:</span>
                 <span className="block mt-2 text-lg font-medium text-gray-600">
-                  {data?.firstname}
+                  {data?.firstname} {" "} {data?.lastname}
+                  <Link to="/user_account/account-information/edit-names">
+                  <FaRegEdit className="absolute top-4 right-4 text-2xl text-white cursor-pointer" /></Link>
                 </span>
               </div>
 
-              {/* Last Name */}
-              <div className="bg-gray-300 p-4 rounded-2xl relative">
-                <span className="text-lg font-semibold">Last Name:</span>
-                <span className="block mt-2 text-lg font-medium text-gray-600">
-                  {data?.lastname}
-                </span>
-              </div>
 
               {/* Username */}
-              <div className="bg-gray-300 p-4 rounded-2xl relative">
+              <div className="bg-gray-300 p-4 rounded-2xl relative" data-aos="zoom-in-left">
                 <span className="text-lg font-semibold">Username:</span>
                 <span className="block mt-2 text-lg font-medium text-gray-600">
                   {data?.username}
+                  <Link to="/user_account/account-information/edit-username">
+                  <FaRegEdit className="absolute top-4 right-4 text-2xl text-white cursor-pointer" /></Link>
                 </span>
               </div>
 
               {/* Email */}
-              <div className="bg-gray-300 p-4 rounded-2xl">
+              <div className="bg-gray-300 p-4 rounded-2xl" data-aos="zoom-in-right">
                 <span className="text-lg font-semibold">Email:</span>
                 <span className="block mt-2 text-lg font-medium text-gray-600">
                   {data?.email}
@@ -94,30 +72,27 @@ const Accountinformation = () => {
               </div>
 
               {/* Country */}
-              <div className="bg-gray-300 p-4 rounded-2xl">
+              <div className="bg-gray-300 p-4 rounded-2xl relative"  data-aos="zoom-in-left">
                 <span className="text-lg font-semibold">Country:</span>
-                <span className="block mt-2 text-lg font-medium text-gray-600"></span>
+                <span className="block mt-2 text-lg font-medium text-gray-600">{data?.country}
+                <Link to="/user_account/account-information/edit-country">
+                <FaRegEdit className="absolute top-4 right-4 text-2xl text-white cursor-pointer" /></Link>
+                </span>
               </div>
             </div>
-            <div className="flex justify-center mt-5">
-              <Link to="/user_account/account-information/user-account/edit-account">
-                <button className="bg-teal px-20 py-5 font-medium cursor-pointer hover:bg-darker-teal rounded-lg text-white-rice">
-                  Edit
-                </button>
-              </Link>
-            </div>
+            
           </section>
 
           {/* Verification Section */}
           <section className="mt-8">
             <h2 className="text-2xl font-bold mb-4">Verification</h2>
-            <div className="bg-gray-300 p-4 rounded-2xl relative group">
+            <div className="bg-gray-300 p-4 rounded-2xl relative group" data-aos="fade-up" data-aos-duration="2000" >
               <span className="text-lg font-semibold">Not Verified</span>
               <span className="flex items-center mt-2 text-lg font-medium text-gray-600">
                 <FaRegAddressCard className="mr-2 text-xl" />
                 Personal ID
               </span>
-              <Link to="/user_acccount/account-information/user-account/ID-upload">
+              <Link to="/user_account/account-information/ID-upload">
                 <IoMdAddCircleOutline className="absolute top-4 right-4 text-3xl text-white cursor-pointer" />
               </Link>
             </div>
@@ -126,12 +101,12 @@ const Accountinformation = () => {
           {/* Security Section */}
           <section className="mt-8">
             <h2 className="text-2xl font-bold mb-4">Security:</h2>
-            <Link to="/user_acccount/account-information/user-account/change-password">
-              <div className="bg-gray-700 p-4 rounded-2xl group cursor-pointer hover:bg-gray-600 transition duration-300">
+            <Link to="/user_account/account-information/edit-password">
+              <div className="bg-gray-700 relative p-4 rounded-2xl group cursor-pointer hover:bg-gray-600 transition duration-300" data-aos="fade-up" data-aos-duration="3000">
                 <span className="text-lg font-semibold text-white-rice">
                   Change Password
                 </span>
-                <IoIosArrowDropright className="absolute top-231 tablet:top-189 right-10 text-3xl text-white transition-all duration-300 group-hover:translate-x-2" />
+                <IoIosArrowDropright className="absolute top-4 right-4 text-3xl text-white transition-all duration-300 group-hover:translate-x-2" />
               </div>
             </Link>
           </section>
@@ -142,7 +117,7 @@ const Accountinformation = () => {
               onClick={() => {
                 deleteaccount(), navigate("/");
               }}
-              className="flex items-center cursor-pointer bg-red-600 p-4 rounded-xl text-white-rice font-semibold text-xl hover:bg-red-500 transition duration-300"
+              className="flex items-center cursor-pointer bg-red-600 p-4 rounded-xl text-white-rice font-semibold text-xl hover:bg-red-500 transition duration-300 animate-zoom-in" style={{ animationDelay: "0.2s" }} 
             >
               <RiDeleteBin5Line className="text-2xl mr-2" />
               Delete Account

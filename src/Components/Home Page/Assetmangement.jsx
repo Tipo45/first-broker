@@ -3,13 +3,13 @@ const Assetmangement = () => {
   return (
     <section>
       <div className="mt-10 mb-20 px-4">
-        <div className="flex tablet:justify-center">
+        <div className="flex tablet:justify-center" data-aos="fade-up" data-aos-duration="500">
           <h1 className="font-semibold text-3xl mb-4">Asset Management</h1>
         </div>
-        <div className="mt-2 mb-1">
+        <div className="mt-2 mb-1" data-aos="fade-right" data-aos-duration="1000">
           <h4 className="text-xl font-semibold text-gray-500">Grow Your Wealth Strategically</h4>
         </div>
-        <div>
+        <div data-aos="zoom-out" data-aos-duration="1500">
           <p className="text-xl leading-relaxed text-gray-800 tablet:text-center">
             We offer asset management services that are specifically designed to
             assist you in reaching your financial objectives. We provide
@@ -21,15 +21,15 @@ const Assetmangement = () => {
       </div>
 
       <div className="mt-10 mb-20 px-4">
-        <div className="flex tablet:justify-center">
+        <div className="flex tablet:justify-center" data-aos="fade-up" data-aos-duration="500">
           <h1 className="font-semibold text-3xl mb-4">Details</h1>
         </div>
-        <div className="mt-2 mb-1">
+        <div className="mt-2 mb-1" data-aos="fade-right" data-aos-duration="1000">
           <h4 className="text-xl font-semibold text-gray-500">
             Grow Your Wealth Strategically
           </h4>
         </div>
-        <div>
+        <div data-aos="zoom-out" data-aos-duration="1500">
           <p className="text-xl leading-relaxed text-gray-800 tablet:text-center">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, maxime minima, vel tenetur ratione corrupti sit earum eos doloremque facere inventore nihil dolorum optio obcaecati. Pariatur fugit temporibus et consequuntur.
           </p>

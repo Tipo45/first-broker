@@ -68,7 +68,7 @@ const MyTrades = () => {
 
           <div className="flex flex-col items-center text-center">
             <div
-              className="p-2 bg-charcoal-gray rounded-3xl flex justify-center animate-fade-up"
+              className="p-2 bg-charcoal-gray rounded-3xl flex justify-center animate-fade-down"
               style={{ animationDelay: "0.6s" }}
             >
               <FaArrowUp className="text-2xl text-white" />

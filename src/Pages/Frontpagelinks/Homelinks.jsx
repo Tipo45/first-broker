@@ -55,7 +55,7 @@ const Homelinks = () => {
   return (
     <section>
       {isValidPage ? (
-        <section>
+        <section className="overflow-hidden">
           <Header />
           <Frontcarousel />
 

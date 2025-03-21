@@ -5,8 +5,6 @@ import Clientlogin from "./Pages/Login/Clientlogin";
 import FirstDisplay from "./Pages/FD/FirstDisplay";
 import Registration from "./Pages/Login/Registration";
 import Accountinformation from "./Components/UserAccount/Accountinformation";
-import Usernamesettings from "./Components/UserAccount/Usernamesettings";
-import Verificationupload from "./Components/UserAccount/Verificationupload";
 import Homelinks from "./Pages/Frontpagelinks/Homelinks";
 import Aboutdevs from "./Pages/Frontpagelinks/Aboutdevs";
 import Investpage from "./Pages/Frontpagelinks/Investpage";
@@ -15,6 +13,7 @@ import AOS from "aos";
 import "aos/dist/aos.css"
 import { useEffect } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Edit from "./Pages/Useraccount/Edit";
 
 
 
@@ -24,8 +23,9 @@ function App() {
 
   useEffect(() => {
     AOS.init({
-      duration: 800, // Animation duration
-      once: true, // Whether animation should happen only once
+      duration: 800, 
+      once: false,
+      easing: "ease-in-out",
     });
   }, []);
   return (
@@ -37,8 +37,7 @@ function App() {
         <Route path="/registration" element={<Registration />} />
         <Route path="/user_account/:activepage" element={<Useraccount />} />
         <Route path="/user_account/account-information" element={<Accountinformation />} />
-        <Route path="/user_account/account-information/user-account/edit-account" element={<Usernamesettings />} />
-        <Route path="/user_account/account-information/user-account/ID-upload" element={<Verificationupload />} />
+        <Route path="/user_account/account-information/:editpage" element={<Edit />} />
         <Route path="/invest/:segmentpage" element={<Investpage />} />
         <Route path="/about-devs/:sectionpage" element={<Aboutdevs />} />
         <Route path="/about-us/:accessedpage" element={<Homelinks />} />

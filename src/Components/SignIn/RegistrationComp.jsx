@@ -125,15 +125,14 @@ const RegistrationComp = () => {
         {/* Logo and Back Link */}
         <Link
           to="/"
-          className={`flex items-center gap-2 self-center font-medium text-xl animate-zoom-out`}
-          style={{ animationDelay: "0.1s" }}
+          className={`flex items-center gap-2 self-center font-medium text-xl`}
+          data-aos="zoom-out" data-aos-duration="500"
         >
           Tipo&apos;s Broker
         </Link>
         <Link
           to="/"
-          className="text-gray-400 flex text-lg hover:text-teal hover:underline animate-fade-right"
-          style={{ animationDelay: "1.3s" }}
+          className="text-gray-400 flex text-lg hover:text-teal hover:underline" data-aos="fade-right" data-aos-duration="2500"
         >
           <RxCaretLeft className="mt-0.5 text-2xl" />
           back to home
@@ -149,8 +148,8 @@ const RegistrationComp = () => {
               <div className="grid gap-2">
                 <label
                   htmlFor="firstname"
-                  className="animate-fade-right"
-                  style={{ animationDelay: "0.2s" }}
+                  className=""
+                  data-aos="fade-right" data-aos-duration="500"
                 >
                   First Name
                 </label>
@@ -165,8 +164,8 @@ const RegistrationComp = () => {
                   }}
                   onBlur={(e) => validateFirstname(e.target.value)}
                   maxLength={16}
-                  className="outline-1 outline-dark-blue hover:outline-teal focus:outline-teal rounded-2xl p-2 w-full animate-fade-right"
-                  style={{ animationDelay: "0.3s" }}
+                  className="outline-1 outline-dark-blue hover:outline-teal focus:outline-teal rounded-2xl p-2 w-full"
+                  data-aos="fade-right" data-aos-duration="1000"
                 />
                 {firstnameError && (
                   <div className="text-red-500 p-2 bg-light-gray rounded-xl font-medium mt-1 mb-1">
@@ -177,8 +176,8 @@ const RegistrationComp = () => {
               <div className="grid gap-2">
                 <label
                   htmlFor="lastname"
-                  className="animate-fade-left"
-                  style={{ animationDelay: "0.4s" }}
+                  className=""
+                  data-aos="fade-left" data-aos-duration="500"
                 >
                   Last Name
                 </label>
@@ -193,8 +192,8 @@ const RegistrationComp = () => {
                     validateLastname(e.target.value);
                   }}
                   onBlur={(e) => validateLastname(e.target.value)}
-                  className="outline-1 outline-dark-blue hover:outline-teal focus:outline-teal rounded-2xl p-2 w-full animate-fade-left"
-                  style={{ animationDelay: "0.5s" }}
+                  className="outline-1 outline-dark-blue hover:outline-teal focus:outline-teal rounded-2xl p-2 w-full"
+                  data-aos="fade-left" data-aos-duration="1000"
                 />
                 {lastnameError && (
                   <div className="text-red-500 p-2 bg-light-gray rounded-xl font-medium mt-1 mb-1">
@@ -209,8 +208,8 @@ const RegistrationComp = () => {
               <div className="grid gap-2">
                 <label
                   htmlFor="email"
-                  className="animate-fade-left"
-                  style={{ animationDelay: "0.6s" }}
+                  className=""
+                  data-aos="fade-left" data-aos-duration="500"
                 >
                   Email
                 </label>
@@ -224,8 +223,8 @@ const RegistrationComp = () => {
                     validateEmail(e.target.value);
                   }}
                   onBlur={(e) => validateEmail(e.target.value)}
-                  className="outline-1 outline-dark-blue hover:outline-teal focus:outline-teal rounded-2xl p-2 animate-fade-left"
-                  style={{ animationDelay: "0.7s" }}
+                  className="outline-1 outline-dark-blue hover:outline-teal focus:outline-teal rounded-2xl p-2"
+                  data-aos="fade-left" data-aos-duration="1000"
                 />
                 {emailError && (
                   <div className="text-red-500 p-2 bg-light-gray rounded-xl font-medium mt-1 mb-1">
@@ -236,8 +235,8 @@ const RegistrationComp = () => {
               <div className="grid gap-2">
                 <label
                   htmlFor="password"
-                  className="animate-fade-left"
-                  style={{ animationDelay: "0.8s" }}
+                  className=""
+                  data-aos="fade-left" data-aos-duration="500"
                 >
                   Password
                 </label>
@@ -251,8 +250,8 @@ const RegistrationComp = () => {
                     validatePassword(e.target.value);
                   }}
                   onBlur={(e) => validatePassword(e.target.value)}
-                  className="outline-1 outline-dark-blue hover:outline-teal focus:outline-teal rounded-2xl p-2 animate-fade-left"
-                  style={{ animationDelay: "0.9s" }}
+                  className="outline-1 outline-dark-blue hover:outline-teal focus:outline-teal rounded-2xl p-2"
+                  data-aos="fade-left" data-aos-duration="1000"
                 />
                 {passwordError && (
                   <div className="text-red-500 p-2 bg-light-gray rounded-xl font-medium mt-1 mb-1">
@@ -263,8 +262,8 @@ const RegistrationComp = () => {
               <div className="grid gap-2">
                 <label
                   htmlFor="confirm-password"
-                  className="animate-fade-left"
-                  style={{ animationDelay: "1s" }}
+                  className=""
+                  data-aos="fade-left" data-aos-duration="500"
                 >
                   Confirm Password
                 </label>
@@ -278,8 +277,8 @@ const RegistrationComp = () => {
                     validateConfirmPassword(e.target.value);
                   }}
                   onBlur={(e) => validateConfirmPassword(e.target.value)}
-                  className="outline-1 outline-dark-blue hover:outline-teal focus:outline-teal rounded-2xl p-2 animate-fade-left"
-                  style={{ animationDelay: "1.1s" }}
+                  className="outline-1 outline-dark-blue hover:outline-teal focus:outline-teal rounded-2xl p-2"
+                  data-aos="fade-left" data-aos-duration="1000"
                 />
                 {confirmPasswordError && (
                   <div className="text-red-500 p-2 bg-light-gray rounded-xl font-medium mt-1 mb-1">
@@ -301,8 +300,8 @@ const RegistrationComp = () => {
               ) : (
                 <button
                   type="submit"
-                  className="w-full cursor-pointer bg-teal hover:bg-darker-teal text-white-rice text-lg font-semibold p-3 rounded-3xl mt-3 animate-zoom-in"
-                  style={{ animationDelay: "1.2s" }}
+                  className="w-full cursor-pointer bg-teal hover:bg-darker-teal text-white-rice text-lg font-semibold p-3 rounded-3xl mt-3"
+                  data-aos="zoom-in" data-aos-duration="1500"
                 >
                   Sign Up
                 </button>
@@ -313,8 +312,8 @@ const RegistrationComp = () => {
 
         {/* Sign In Link */}
         <div
-          className="text-center text-sm animate-fade-down"
-          style={{ animationDelay: "1.3s" }}
+          className="text-center text-sm"
+          data-aos="fade-up" data-aos-duration="1500"
         >
           Have an account?{" "}
           <Link
@@ -328,7 +327,7 @@ const RegistrationComp = () => {
         {/* Terms and Privacy Policy */}
         <div
           className="text-balance text-center text-xs text-muted-foreground [&_a]:underline [&_a]:underline-offset-4 [&_a]:hover:text-primary animate-fade-down"
-          style={{ animationDelay: "1.3s" }}
+          style={{animationDelay: "0.2s"}}
         >
           By clicking register, you agree to our{" "}
           <Link to="#" className="text-blue-500">

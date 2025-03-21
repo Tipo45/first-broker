@@ -1,12 +1,25 @@
-import { FaArrowAltCircleLeft } from "react-icons/fa";
-import Usersidebar from "./Usersidebar";
-import { Link } from "react-router-dom";
 import { useState } from "react";
+import { FaSpinner } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import { update_userID } from "../../lib/pocketbase";
 
 const Verificationupload = () => {
+  const [upload, setUpload] = useState("");
+  const [uploadError, setUploadError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
   const [selectedFile, setSelectedFile] = useState(null);
 
+  const validateUpload = () => {
+    if (!upload) {
+      setUploadError("choosee a file");
+    } else {
+      setUploadError("");
+    }
+  };
+
   const handleFileChange = (event) => {
+    setUpload(event.target.value);
     const file = event.target.files[0];
     if (file && file.type.startsWith("image/")) {
       setSelectedFile(file);
@@ -17,51 +30,101 @@ const Verificationupload = () => {
 
   const handleRemoveFile = () => {
     setSelectedFile(null);
+
+    setLoading(false);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    validateUpload(upload);
+
+     if (uploadError) {
+          setLoading(false);
+          return;
+        }
+    
+        try {
+          const result = await  update_userID(upload);
+    
+          if (result) {
+            alert("Successfuly added ID");
+            navigate("/user_account/account-information");
+          }
+        } catch (error) {
+          console.error("Update failed:", error);
+          alert("Failed to update user. Please try again.");
+        }
+
+    setLoading(false);
   };
 
   return (
-    <section className="flex">
-      {/* Sidebar */}
-      <Usersidebar />
-
-      <div className="flex-grow pr-1 pl-4 ml-13 tablet:ml-43 transition-all duration-300 mt-1 mb-1">
-        <Link to="/user_account/account-information">
-          <div className="inline-flex items-center p-2 rounded-full hover:bg-gray-500 transition duration-300 group">
-            <FaArrowAltCircleLeft className="text-2xl text-black-spider group-hover:text-white-rice" />
-          </div>
-        </Link>
-        <div>
-          <h1 className="text-2xl text-center font-semibold">Upload ID</h1>
-        </div>
-
+    <section>
+      <div>
+        <form onSubmit={(e) => handleSubmit(e)}>
         <div className="mt-24 grid grid-cols-1">
-      <div className="bg-gray-900 text-white p-4 rounded-lg">
-        <label className="bg-gray-700 text-white px-4 py-2 rounded cursor-pointer">
-          Choose File
-          <input type="file" className="hidden" onChange={handleFileChange} />
-        </label>
+          <div className="bg-gray-900 text-white p-4 rounded-lg" data-aos="fade-up"
+             data-aos-duration="1000">
+            <label className="bg-gray-700 text-white px-4 py-2 rounded cursor-pointer">
+              Choose File
+              <input
+                type="file"
+                className="hidden"
+                value={upload}
+                onChange={handleFileChange}
+                onBlur={(e) => validateUpload(e.target.value)}
+              />
+            </label>
 
-        <span className="ml-2 text-gray-300">
-          {selectedFile ? selectedFile.name : "No file chosen"}
-        </span>
+            <span className="ml-2 text-gray-300">
+              {selectedFile ? selectedFile.name : "No file chosen"}
+            </span>
 
-        {selectedFile && (
-          <button
-            className="ml-4 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
-            onClick={handleRemoveFile}
-          >
-            Remove
-          </button>
-        )}
-      </div>
-    </div>
-    <div className="mt-4 px-2">
-        <span className="text-gray-400">*image size should not be more than 5MB</span>
-    </div>
+            {selectedFile && (
+              <button
+                className="ml-4 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
+                onClick={handleRemoveFile}
+              >
+                Remove
+              </button>
+            )}
+          </div>
+          {uploadError && (
+            <div className="text-red-500 p-2 bg-light-gray rounded-xl font-medium mt-1 mb-1">
+              {uploadError}
+            </div>
+          )}
+        </div>
+        <div className="mt-4 px-2">
+          <span className="text-gray-400">
+            *image size should not be more than 5MB
+          </span>
+        </div>
 
         <div className="flex justify-center mt-8">
-        <button type="submit" className="bg-teal hover:bg-darker-teal p-4 text-lg cursor-pointer font-medium text-white-rice rounded-lg">Upload</button>
+          {loading ? (
+            <button className="bg-teal hover:bg-darker-teal p-4 text-lg cursor-not-allowed font-medium text-white-rice rounded-lg">
+              <svg
+                className="mr-3 size-8 text-light-gray animate-spin"
+                viewBox="0 0 24 24"
+              >
+                <FaSpinner />
+              </svg>
+            </button>
+          ) : (
+            <button
+              type="submit"
+              className="bg-teal hover:bg-darker-teal p-4 text-lg cursor-pointer font-medium text-white-rice rounded-lg"
+              data-aos="zoom-in"
+             data-aos-duration="2000"
+            >
+              Update
+            </button>
+          )}
         </div>
+        </form>
       </div>
     </section>
   );

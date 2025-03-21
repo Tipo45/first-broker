@@ -24,7 +24,7 @@ const Investpage = () => {
   return (
     <section>
       {isValidPage ? (
-        <section>
+        <section className="overflow-hidden">
           <Header />
           <div className="mt-20 px-4">
             {segmentpage === "commodities" && <Commodities />}

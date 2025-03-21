@@ -55,14 +55,14 @@ const LoginComp = () => {
       <div className="flex w-full max-w-sm flex-col gap-6">
         <Link
           to="/"
-          className={`flex items-center gap-2 self-center font-medium text-xl animate-zoom-out`}
-          style={{ animationDelay: "0.1s" }}
+          className={`flex items-center gap-2 self-center font-medium text-xl`}
+          data-aos="zoom-out" data-aos-duration="500"
         >
           Tipo&apos;s Broker
         </Link>
         <Link
           to="/"
-          className="text-gray-400 flex text-lg hover:text-teal hover:underline animate-fade-right" style={{ animationDelay: "0.8s" }}
+          className="text-gray-400 flex text-lg hover:text-teal hover:underline" data-aos="fade-right" data-aos-duration="2500"
         >
           <RxCaretLeft className="mt-0.5 text-2xl" />
           back to home
@@ -72,7 +72,7 @@ const LoginComp = () => {
           <div className="grid gap-6">
             <div className="grid gap-6">
               <div className="grid gap-2">
-                <label htmlFor="email" className="animate-fade-left" style={{ animationDelay: "0.2s" }}>Email</label>
+                <label htmlFor="email" className="" data-aos="fade-left" data-aos-duration="500">Email</label>
                 <input
                   id="email"
                   type="email"
@@ -80,16 +80,16 @@ const LoginComp = () => {
                   
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="outline-1 outline-dark-blue hover:outline-teal focus:outline-teal rounded-2xl p-2 animate-fade-left" style={{ animationDelay: "0.3s" }}
+                  className="outline-1 outline-dark-blue hover:outline-teal focus:outline-teal rounded-2xl p-2" data-aos="fade-left" data-aos-duration="1000"
                 />
                 {emailError && (<div className="text-red-500 font-medium p-2 bg-light-gray rounded-xl mt-1 mb-1">{emailError}</div>)}
               </div>
               <div className="grid gap-2">
                 <div className="flex items-center">
-                  <label htmlFor="password" className="animate-fade-left" style={{ animationDelay: "0.4s" }}>Password</label>
+                  <label htmlFor="password" className="" data-aos="fade-left" data-aos-duration="1500">Password</label>
                   <Link
                     to="/"
-                    className="ml-auto text-sm underline-offset-4 hover:text-teal hover:underline text-gray-600 animate-fade-right" style={{ animationDelay: "0.8s" }}
+                    className="ml-auto text-sm underline-offset-4 hover:text-teal hover:underline text-gray-600" data-aos="fade-right" data-aos-duration="2500"
                   >
                     Forgot your password?
                   </Link>
@@ -101,7 +101,7 @@ const LoginComp = () => {
                  
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="outline-1 outline-dark-blue hover:outline-teal focus:outline-teal rounded-2xl p-2 animate-fade-left" style={{ animationDelay: "0.5s" }}
+                  className="outline-1 outline-dark-blue hover:outline-teal focus:outline-teal rounded-2xl p-2" data-aos="fade-left" data-aos-duration="2000"
                 />
                 {passwordError && (<div className="text-red-500 p-2 bg-light-gray rounded-xl font-medium mt-1 mb-1">{passwordError}</div>)}
               </div>
@@ -117,13 +117,13 @@ const LoginComp = () => {
               ) : (
                 <button
                   type="submit"
-                  className="w-full cursor-pointer bg-teal hover:bg-darker-teal text-white-rice text-lg font-semibold p-3 rounded-3xl mt-3 animate-zoom-in" style={{ animationDelay: "0.6s" }}
+                  className="w-full cursor-pointer bg-teal hover:bg-darker-teal text-white-rice text-lg font-semibold p-3 rounded-3xl mt-3" data-aos="zoom-in" data-aos-duration="2500"
                 >
                   Sign In
                 </button>
               )}
             </div>
-            <div className="text-center text-sm animate-fade-down" style={{ animationDelay: "0.8s" }}>
+            <div className="text-center text-sm" data-aos="fade-up" data-aos-duration="3000">
               Don&apos;t have an account?{" "}
               <Link
                 to="/registration"
@@ -135,7 +135,7 @@ const LoginComp = () => {
           </div>
         </form>
 
-        <div className="text-balance text-center text-xs text-muted-foreground [&_a]:underline [&_a]:underline-offset-4 [&_a]:hover:text-primary animate-fade-down" style={{ animationDelay: "0.8s" }}>
+        <div className="text-balance text-center text-xs text-muted-foreground [&_a]:underline [&_a]:underline-offset-4 [&_a]:hover:text-primary" data-aos="fade-up" data-aos-duration="3000">
           By clicking Login, you agree to our{" "}
           <Link to="/" className="text-blue-500">
             Terms of Service

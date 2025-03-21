@@ -4,10 +4,14 @@ import Timmy from "../../assets/Images/Timmy_Lu.jpg";
 import Shanae from "../../assets/Images/Shanae_Williams.jpg";
 import PropTypes from "prop-types";
 
-
-const TestimonialCard = ({ image, name, testimony, rating }) => {
+const TestimonialCard = ({ image, name, testimony, rating, duration, delay }) => {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+    <div
+      className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+      data-aos="fade-up" // Animation type
+      data-aos-duration={duration} // Animation duration
+      data-aos-delay={delay} // Animation delay
+    >
       <div className="flex items-center space-x-4">
         <img
           src={image}
@@ -46,28 +50,36 @@ const Testimony = () => {
       name: "David Washington",
       testimony:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsa natus expedita dicta ab beatae laudantium pariatur e.",
-        rating: "5",
+      rating: 5,
+      duration: "1000",
+      delay: "0", // No delay for the first card
     },
     {
       image: Kerry,
       name: "Kerry Walsh",
       testimony:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsa natus expedita dicta ab beatae laudantium pariatur eius.",
-        rating: "5",
+      rating: 5,
+      duration: "1500",
+      delay: "500", // 500ms delay for the second card
     },
     {
       image: Timmy,
       name: "Timmy Lu",
       testimony:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsa natus expedita dicta ab beatae.",
-        rating: "3",
+      rating: 3,
+      duration: "2000",
+      delay: "1000", // 1000ms delay for the third card
     },
     {
       image: Shanae,
       name: "Shanae Williams",
       testimony:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsa natus expedita dicta ab beatae laudantium pariatur eius cupiditate quod blanditiis maiores, voluptates voluptatum, dignissimos officiis tempore ipsam dolorem reiciendis!",
-        rating: "4",
+      rating: 4,
+      duration: "2500",
+      delay: "1500", // 1500ms delay for the fourth card
     },
   ];
 
@@ -75,10 +87,18 @@ const Testimony = () => {
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-800">
+          <h2
+            className="text-4xl font-bold text-gray-800"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
             In doubt?..., Trust their voices
           </h2>
-          <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+          <p
+            className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto"
+            data-aos="zoom-in"
+            data-aos-duration="1500"
+          >
             Experience genuine joy and fulfillment as our valued clients pursue
             their dreams of financial freedom and elite investment opportunities.
           </p>
@@ -91,6 +111,8 @@ const Testimony = () => {
               name={testimonial.name}
               testimony={testimonial.testimony}
               rating={testimonial.rating}
+              duration={testimonial.duration}
+              delay={testimonial.delay} // Pass delay to the card
             />
           ))}
         </div>
@@ -100,10 +122,12 @@ const Testimony = () => {
 };
 
 TestimonialCard.propTypes = {
-  image: PropTypes.string.isRequired, 
+  image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   testimony: PropTypes.string.isRequired,
   rating: PropTypes.number.isRequired,
+  duration: PropTypes.string.isRequired,
+  delay: PropTypes.string.isRequired, // Add delay to prop types
 };
 
 StarRating.propTypes = {

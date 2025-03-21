@@ -17,11 +17,12 @@ const Aboutdevs = () => {
   return (
     <section>
       {isValidPage ? (
-        <section>
+        <section className="overflow-hidden">
           <Header />
           <div className="mt-20 px-4">
             <Link to="/">
-              <div className="inline-flex items-center p-2 rounded-full hover:bg-gray-500 transition duration-300 group">
+              <div className="inline-flex items-center p-2 rounded-full hover:bg-gray-500 transition duration-300 group" data-aos="fade-right"
+     data-aos-duration="1000">
                 <FaArrowAltCircleLeft className="text-2xl text-black-spider group-hover:text-white-rice" />
               </div>
             </Link>

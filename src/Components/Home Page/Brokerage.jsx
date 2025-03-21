@@ -2,16 +2,19 @@ const Brokerage = () => {
   return (
     <section>
       <div className="mt-10 mb-20 px-4">
-        <div className="flex tablet:justify-center">
+        <div className="flex tablet:justify-center" data-aos="fade-up"
+     data-aos-duration="500">
           <h1 className="font-semibold text-3xl mb-4">Platform</h1>
         </div>
-        <div className="mt-2 mb-3">
+        <div className="mt-2 mb-3" data-aos="fade-right"
+     data-aos-duration="1000">
           <h4 className="text-xl font-semibold text-gray-500">
             <span className="text-charcoal-gray">TRADE SMARTER</span>, Not
             Harder
           </h4>
         </div>
-        <div>
+        <div data-aos="zoom-out"
+     data-aos-duration="1500">
           <p className="text-xl leading-relaxed text-gray-800 tablet:text-center">
             Our cutting-edge trading platform is designed to be quick,
             dependable, and simple to use. Get one-click trading, sophisticated
@@ -23,15 +26,18 @@ const Brokerage = () => {
       </div>
 
       <div className="mt-10 mb-20 px-4">
-        <div className="flex tablet:justify-center">
+        <div className="flex tablet:justify-center" data-aos="fade-up"
+     data-aos-duration="500">
           <h1 className="font-semibold text-3xl mb-4">Brokerage</h1>
         </div>
-        <div className="mt-2 mb-3">
+        <div className="mt-2 mb-3" data-aos="fade-right"
+     data-aos-duration="1000">
           <h4 className="text-xl font-semibold text-gray-500">
             Empowering Your Trades
           </h4>
         </div>
-        <div>
+        <div data-aos="zoom-out"
+     data-aos-duration="1500">
           <p className="text-xl leading-relaxed text-gray-800 tablet:text-center">
             Our brokerage services offer easy access to international markets,
             such as commodities, cryptocurrency, and currencies. We make sure

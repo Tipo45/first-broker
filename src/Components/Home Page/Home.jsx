@@ -85,7 +85,11 @@ const Home = () => {
       {/* Why choose us? */}
       <section>
         <div className="px-6 py-6 mt-20">
-          <h1 className="text-3xl text-black-spider font-semibold mb-12 text-center" data-aos="fade-in" data-aos-duration="2000">
+          <h1
+            className="text-3xl text-black-spider font-semibold mb-12 text-center"
+            data-aos="fade-in"
+            data-aos-duration="2000"
+          >
             Why Choose Us?
           </h1>
 
@@ -94,7 +98,9 @@ const Home = () => {
               <li
                 key={index}
                 className="p-6 flex flex-col items-center text-center"
-                data-aos="fade-up" data-aos-duration="2000">
+                data-aos="fade-up"
+                data-aos-duration="2000"
+              >
                 {feature.icon}
                 <p className="mt-4 text-lg font-mono xl:text-xl">
                   {feature.text}
@@ -121,9 +127,10 @@ const Home = () => {
             ? "bg-dark-blue text-white" // Custom styles for this specific item
             : "bg-light-gray text-black-spider"
         }`}
-        data-aos="flip-left"
-        data-aos-easing="ease-out-cubic"
-        data-aos-duration="2000">
+                data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+              >
                 {attribute.number}
                 <p className="mt-4 text-lg font-mono xl:text-xl">
                   {attribute.tag}
@@ -138,20 +145,44 @@ const Home = () => {
       <section>
         <div className="px-6 py-6 mt-2">
           <div className="grid grid-cols-1 gap-10 tablet:grid-cols-2">
-            <img src={paypalimag} alt="" className="w-full h-auto" data-aos="zoom-in" data-aos-duration="1000" />
+            <img
+              src={paypalimag}
+              alt=""
+              className="w-full h-auto"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+            />
             <div>
-              <h2 className="text-2xl mb-1 text-gray-600" data-aos="fade-down" data-aos-duration="1000">Our Services</h2>
-              <h3 className="text-2xl" data-aos="zoom-out" data-aos-duration="2000">
+              <h2
+                className="text-2xl mb-1 text-gray-600"
+                data-aos="fade-down"
+                data-aos-duration="1000"
+              >
+                Our Services
+              </h2>
+              <h3
+                className="text-2xl"
+                data-aos="zoom-out"
+                data-aos-duration="2000"
+              >
                 In a Fast Moving Market,{" "}
                 <span className="text-blue-950 text-3xl">
                   Choose a Trusted Broker...
                 </span>
               </h3>
-              <p className="text-gray-400 mb-2 text-lg p-2" data-aos="zoom-in" data-aos-duration="2000">
+              <p
+                className="text-gray-400 mb-2 text-lg p-2"
+                data-aos="zoom-in"
+                data-aos-duration="2000"
+              >
                 we give you nothing short of the best. we put our all into
                 looking after your funds
               </p>
-              <p className="text-xl text-dark-blue font-semibold bg-light-gray p-3 rounded-xl border-l-6 border-dark-blue" data-aos="fade-left" data-aos-duration="2000">
+              <p
+                className="text-xl text-dark-blue font-semibold bg-light-gray p-3 rounded-xl border-l-6 border-dark-blue"
+                data-aos="fade-left"
+                data-aos-duration="2000"
+              >
                 Everything you need to trade forex and buy crypto in one place
               </p>
               <p className="mt-5" data-aos="zoom-out" data-aos-duration="2000">
@@ -188,13 +219,25 @@ const Home = () => {
       {/* Invest */}
       <section>
         <div className="px-6 py-6 mt-2">
-          <h2 className="text-2xl text-gray-600 font-semibold mb-10 text-left 2xl:text-center" data-aos="fade-right" data-aos-duration="1000">
+          <h2
+            className="text-2xl text-gray-600 font-semibold mb-10 text-left 2xl:text-center"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
             Invest
           </h2>
-          <h3 className="text-2xl text-gray-400 font-semibold text-left 2xl:text-center" data-aos="fade-right" data-aos-duration="1000">
+          <h3
+            className="text-2xl text-gray-400 font-semibold text-left 2xl:text-center"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
             All your crypto investments.
           </h3>
-          <h3 className="text-2xl text-dark-blue font-semibold text-left 2xl:text-center" data-aos="fade-right" data-aos-duration="2000">
+          <h3
+            className="text-2xl text-dark-blue font-semibold text-left 2xl:text-center"
+            data-aos="fade-right"
+            data-aos-duration="2000"
+          >
             All on Tipo&apos;s Broker.
           </h3>
           <div className="mt-10">
@@ -211,7 +254,7 @@ const Home = () => {
                   img: (
                     <img src={img001} alt="" className="w-full p-2 h-auto" />
                   ),
-                  index: "commodities"
+                  index: "commodities",
                 },
                 {
                   name: "Crypto Indices",
@@ -224,7 +267,7 @@ const Home = () => {
                   img: (
                     <img src={img004} alt="" className="w-full p-2 h-auto" />
                   ),
-                  index: "crypto-indices"
+                  index: "crypto-indices",
                 },
                 {
                   name: "Stocks",
@@ -256,7 +299,9 @@ const Home = () => {
                 <Link
                   to={to}
                   key={index}
-                  className="p-3 bg-charcoal-gray rounded-lg transition-colors duration-300 group" data-aos="fade-up" data-aos-duration="2000"
+                  className="p-3 bg-charcoal-gray rounded-lg transition-colors duration-300 group"
+                  data-aos="fade-up"
+                  data-aos-duration="2000"
                 >
                   {/* Name and Metric (only for Commodities and Stocks) */}
                   <h3 className="text-2xl text-white-rice font-semibold flex items-center space-x-2 group-hover:text-teal">
@@ -285,8 +330,11 @@ const Home = () => {
             </ul>
           </div>
 
-          <div className="mt-12 text-gray-500" data-aos="fade-up"
-     data-aos-anchor-placement="top-bottom">
+          <div
+            className="mt-12 text-gray-500"
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom"
+          >
             <p className="mb-5">
               Investing in stocks and commodities entails risks. Conduct your
               own research before concluding a transaction.
@@ -303,14 +351,20 @@ const Home = () => {
       {/* How it works */}
       <section>
         <div className="px-12 py-6 mt-2">
-          <h2 className="text-3xl font-semibold mb-12 text-center" data-aos="fade-up" data-aos-duration="1000">
+          <h2
+            className="text-3xl font-semibold mb-12 text-center"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
             How it Works?
           </h2>
           <ul className="grid grid-cols-1 gap-20  lg:max-xl:grid-cols-2 xl:grid-cols-4">
             {traits.map((trait, index) => (
               <div
                 key={index}
-                className="relative flex flex-col justify-center items-center w-72 h-72 bg-charcoal-gray hover:bg-darker-teal outline-2 outline-gray-200 rounded-full overflow-hidden p-6 transition-colors duration-300 group" data-aos="fade-up" data-aos-duration="2000"
+                className="relative flex flex-col justify-center items-center w-72 h-72 bg-charcoal-gray hover:bg-darker-teal outline-2 outline-gray-200 rounded-full overflow-hidden p-6 transition-colors duration-300 group"
+                data-aos="fade-up"
+                data-aos-duration="2000"
               >
                 <p className="text-4xl group-hover:hidden">{trait.logo}</p>
                 <h3 className="text-2xl text-center font-semibold mb-2 text-white-rice group-hover:text-gray-100 group-hover:font-extrabold ">
@@ -330,8 +384,11 @@ const Home = () => {
             ))}
           </ul>
 
-          <div className="text-center mt-15" data-aos="fade-up"
-     data-aos-anchor-placement="top-bottom">
+          <div
+            className="text-center mt-15"
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom"
+          >
             <p className="text-gray-600">
               Everything you need to trade Forex and buy crypto in one place.
             </p>
